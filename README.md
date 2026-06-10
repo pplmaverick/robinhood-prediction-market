@@ -18,6 +18,26 @@ No order book, no counterparty risk. BULL pool and BEAR pool accumulate independ
 
 ---
 
+## Architecture
+
+```
+User
+ |
+ |-- placeBet(marketId, BULL/BEAR) --> StockPredictionMarket
+ |                                           |
+ |                                    +--------------+
+ |                                    |    Market    |
+ |                                    |    struct    |
+ |                                    +------+-------+
+ |                                           |
+ |                              stockToken (RH Chain    priceFeed (Chainlink-
+ |                              native TSLA/AMZN/PLTR)  compatible IPriceFeed)
+ |
+ +-- claimWinnings(marketId) <-- parimutuel payout (2% fee)
+```
+
+---
+
 ## Deployed Contracts
 
 **Robinhood Chain Testnet (Chain ID: 46630)**
