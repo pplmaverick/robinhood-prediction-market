@@ -48,6 +48,8 @@ User
 | TSLA MockPriceFeed | [`0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f`](https://explorer.testnet.chain.robinhood.com/address/0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f) |
 | AMZN MockPriceFeed | [`0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953`](https://explorer.testnet.chain.robinhood.com/address/0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953) |
 | PLTR MockPriceFeed | [`0xBdC53E50b1167cE1199bFaD54A034f7ab1741051`](https://explorer.testnet.chain.robinhood.com/address/0xBdC53E50b1167cE1199bFaD54A034f7ab1741051) |
+| NFLX MockPriceFeed | [`0xf6fdc6482221db4D7D285F96AdDa1914018C2642`](https://explorer.testnet.chain.robinhood.com/address/0xf6fdc6482221db4D7D285F96AdDa1914018C2642) |
+| AMD MockPriceFeed | [`0xfCE76bbbdac30D17061f8Fc1f57Cd55dDa6BA40d`](https://explorer.testnet.chain.robinhood.com/address/0xfCE76bbbdac30D17061f8Fc1f57Cd55dDa6BA40d) |
 
 **Robinhood Chain Stock Tokens (Official)**
 
