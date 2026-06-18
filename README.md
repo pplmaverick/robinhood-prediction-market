@@ -44,10 +44,10 @@ User
 
 | Contract | Address |
 |---|---|
-| StockPredictionMarket | `0x15636CE4C0EdE55335f84E6386f8F49C897c077d` |
-| TSLA MockPriceFeed | `0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f` |
-| AMZN MockPriceFeed | `0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953` |
-| PLTR MockPriceFeed | `0xBdC53E50b1167cE1199bFaD54A034f7ab1741051` |
+| StockPredictionMarket | [`0x15636CE4C0EdE55335f84E6386f8F49C897c077d`](https://explorer.testnet.chain.robinhood.com/address/0x15636CE4C0EdE55335f84E6386f8F49C897c077d) |
+| TSLA MockPriceFeed | [`0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f`](https://explorer.testnet.chain.robinhood.com/address/0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f) |
+| AMZN MockPriceFeed | [`0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953`](https://explorer.testnet.chain.robinhood.com/address/0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953) |
+| PLTR MockPriceFeed | [`0xBdC53E50b1167cE1199bFaD54A034f7ab1741051`](https://explorer.testnet.chain.robinhood.com/address/0xBdC53E50b1167cE1199bFaD54A034f7ab1741051) |
 
 **Robinhood Chain Stock Tokens (Official)**
 
