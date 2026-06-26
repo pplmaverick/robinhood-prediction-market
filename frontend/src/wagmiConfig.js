@@ -17,6 +17,9 @@ export const config = createConfig({
   chains: [robinhoodTestnet],
   connectors: [injected()],
   transports: {
-    [robinhoodTestnet.id]: http('https://rpc.testnet.chain.robinhood.com'),
+    [robinhoodTestnet.id]: http('https://rpc.testnet.chain.robinhood.com', {
+      timeout: 30_000,
+    }),
   },
+  pollingInterval: 2_000,
 })

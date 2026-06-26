@@ -150,11 +150,14 @@ export default function Markets() {
 
   // ── write contract (place bet) ────────────────────────────────────────────
 
-  const { writeContract, data: txHash, isPending, reset } = useWriteContract()
-  const { isLoading: isConfirming, isSuccess: confirmed } = useWaitForTransactionReceipt({
+  const { writeContract, data: txHash, isPending, reset, error: writeError } = useWriteContract()
+  const { isLoading: isConfirming, isSuccess: confirmed, error: receiptError } = useWaitForTransactionReceipt({
     hash: txHash,
+    timeout: 60_000,
+    pollingInterval: 2_000,
     query: { enabled: !!txHash },
   })
+  const txError = writeError || receiptError
 
   useEffect(() => {
     if (confirmed) {
@@ -514,6 +517,18 @@ export default function Markets() {
                   <div className="w-full py-4 bg-surface-container-high text-primary font-headline-md rounded-lg text-center flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined">check_circle</span>
                     Bet Confirmed!
+                  </div>
+                ) : txError ? (
+                  <div className="space-y-2">
+                    <div className="w-full py-3 bg-error-container text-on-error-container font-label-caps rounded-lg text-center text-sm px-4">
+                      {txError.shortMessage ?? txError.message ?? 'Transaction failed'}
+                    </div>
+                    <button
+                      onClick={reset}
+                      className="w-full py-3 border border-outline-variant text-on-surface-variant font-label-caps rounded-lg hover:bg-surface-variant/20 transition-all"
+                    >
+                      Reset &amp; Try Again
+                    </button>
                   </div>
                 ) : (
                   <button
