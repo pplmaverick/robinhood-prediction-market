@@ -1,5 +1,7 @@
 # Robinhood Stock Prediction Market
 
+[![CI](https://github.com/pplmaverick/robinhood-stock-market/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/pplmaverick/robinhood-stock-market/actions/workflows/test.yml)
+
 ---
 
 ## Core Features
