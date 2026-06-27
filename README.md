@@ -1,6 +1,13 @@
 # Robinhood Stock Prediction Market
 
 [![CI](https://github.com/pplmaverick/robinhood-stock-market/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/pplmaverick/robinhood-stock-market/actions/workflows/test.yml)
+![Network](https://img.shields.io/badge/Robinhood%20Chain%20Testnet-46630-blue)
+![Solidity](https://img.shields.io/badge/Solidity-0.8.28-black)
+![License](https://img.shields.io/badge/license-MIT-green)
+
+A parimutuel stock prediction market built on Robinhood Chain using native Stock Tokens (TSLA, AMZN, PLTR, NFLX, AMD).
+
+**Live Demo →** [frontend-tau-azure-50.vercel.app](https://frontend-tau-azure-50.vercel.app) · Network: Robinhood Chain Testnet (Chain ID 46630)
 
 ---
 
