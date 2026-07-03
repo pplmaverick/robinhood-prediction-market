@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom'
 import { useAccount, useConnect, useDisconnect, useBalance, useChainId, useSwitchChain } from 'wagmi'
 import { injected } from 'wagmi/connectors'
-import { robinhoodTestnet } from '../wagmiConfig'
+import { robinhoodMainnet } from '../wagmiConfig'
 
 export default function Navbar() {
   const { address, isConnected } = useAccount()
@@ -11,7 +11,7 @@ export default function Navbar() {
   const chainId        = useChainId()
   const { switchChain } = useSwitchChain()
 
-  const isWrongNetwork = isConnected && chainId !== robinhoodTestnet.id
+  const isWrongNetwork = isConnected && chainId !== robinhoodMainnet.id
 
   const navCls = ({ isActive }) =>
     isActive
@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-16">
           {/* Logo */}
           <div className="font-headline-md text-headline-md font-semibold text-on-surface flex items-center gap-1">
-            Robinhood Stock Market
+            Robinhood Stock Prediction Market
             <span className="w-1.5 h-1.5 bg-primary rounded-full inline-block" />
           </div>
 
@@ -53,11 +53,11 @@ export default function Navbar() {
 
             {isWrongNetwork ? (
               <button
-                onClick={() => switchChain({ chainId: robinhoodTestnet.id })}
+                onClick={() => switchChain({ chainId: robinhoodMainnet.id })}
                 className="bg-secondary text-on-secondary-container font-label-caps px-4 py-2 rounded-lg border border-secondary hover:brightness-110 active:scale-95 transition-all flex items-center gap-2"
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 16 }}>warning</span>
-                Switch to Robinhood Testnet
+                Switch to Robinhood Chain
               </button>
             ) : isConnected ? (
               <button
@@ -82,7 +82,7 @@ export default function Navbar() {
       {isWrongNetwork && (
         <div className="bg-secondary/20 border-b border-secondary/40 px-gutter py-2 text-center">
           <span className="font-label-caps text-secondary text-sm">
-            ⚠ Wrong network detected. Please switch to Robinhood Chain Testnet (Chain ID 46630).
+            ⚠ Wrong network detected. Please switch to Robinhood Chain (Chain ID 4663).
           </span>
         </div>
       )}

@@ -182,7 +182,7 @@ export default function MarketStatus() {
       <div className="mt-6 p-4 bg-surface-container border border-outline-variant rounded-lg">
         <div className="font-label-caps text-on-surface-variant mb-2">CONTRACT</div>
         <a
-          href={`https://explorer.testnet.chain.robinhood.com/address/${MARKET_ADDRESS}`}
+          href={`https://robinhoodchain.blockscout.com/address/${MARKET_ADDRESS}`}
           target="_blank" rel="noreferrer"
           className="font-data-sm text-tertiary-fixed-dim hover:text-primary transition-colors break-all"
         >

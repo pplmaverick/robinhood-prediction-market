@@ -1,23 +1,23 @@
 import { http, createConfig } from 'wagmi'
 import { injected } from 'wagmi/connectors'
 
-export const robinhoodTestnet = {
-  id: 46630,
-  name: 'Robinhood Chain Testnet',
+export const robinhoodMainnet = {
+  id: 4663,
+  name: 'Robinhood Chain',
   nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
   rpcUrls: {
-    default: { http: ['https://rpc.testnet.chain.robinhood.com'] },
+    default: { http: ['https://rpc.mainnet.chain.robinhood.com'] },
   },
   blockExplorers: {
-    default: { name: 'Explorer', url: 'https://explorer.testnet.chain.robinhood.com' },
+    default: { name: 'Blockscout', url: 'https://robinhoodchain.blockscout.com' },
   },
 }
 
 export const config = createConfig({
-  chains: [robinhoodTestnet],
+  chains: [robinhoodMainnet],
   connectors: [injected()],
   transports: {
-    [robinhoodTestnet.id]: http('https://rpc.testnet.chain.robinhood.com', {
+    [robinhoodMainnet.id]: http('https://rpc.mainnet.chain.robinhood.com', {
       timeout: 30_000,
     }),
   },

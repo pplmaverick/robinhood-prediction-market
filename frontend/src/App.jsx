@@ -52,12 +52,12 @@ export default function App() {
         <footer className="mt-auto py-8 px-gutter border-t border-outline-variant">
           <div className="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-label-caps text-on-surface-variant uppercase tracking-widest">
-              Powered by Robinhood Chain Testnet · Chain ID 46630
+              Powered by Robinhood Chain · Chain ID 4663 · Chainlink Price Feeds
             </div>
             <div className="flex gap-6 text-label-caps text-on-surface-variant">
-              <a href="https://explorer.testnet.chain.robinhood.com" target="_blank" rel="noreferrer"
+              <a href="https://robinhoodchain.blockscout.com" target="_blank" rel="noreferrer"
                  className="hover:text-primary transition-colors">Explorer</a>
-              <a href="https://rpc.testnet.chain.robinhood.com" target="_blank" rel="noreferrer"
+              <a href="https://rpc.mainnet.chain.robinhood.com" target="_blank" rel="noreferrer"
                  className="hover:text-primary transition-colors">RPC</a>
             </div>
           </div>

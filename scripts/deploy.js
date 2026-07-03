@@ -4,37 +4,40 @@ async function main() {
   const [deployer] = await hre.ethers.getSigners();
   console.log("Deploying with:", deployer.address);
 
-  // Robinhood Chain Testnet stock token addresses (official)
+  // Robinhood Chain Mainnet stock token addresses (official, from
+  // docs.robinhood.com/chain/contracts, cross-checked on-chain via eth_getCode
+  // and Blockscout is_verified_via_admin_panel=true)
   const STOCK_TOKENS = {
-    TSLA: "0xC9f9c86933092BbbfFF3CCb4b105A4A94bf3Bd4E",
-    AMZN: "0x5884aD2f920c162CFBbACc88C9C51AA75eC09E02",
-    PLTR: "0x1FBE1a0e43594b3455993B5dE5Fd0A7A266298d0",
-    NFLX: "0x3b8262A63d25f0477c4DDE23F83cfe22Cb768C93",
-    AMD:  "0x71178BAc73cBeb415514eB542a8995b82669778d",
+    TSLA: "0x322F0929c4625eD5bAd873c95208D54E1c003b2d",
+    AMZN: "0x12f190a9F9d7D37a250758b26824B97CE941bF54",
+    PLTR: "0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A",
+    AMD:  "0x86923f96303D656E4aa86D9d42D1e57ad2023fdC",
+    NVDA: "0xd0601CE157Db5bdC3162BbaC2a2C8aF5320D9EEC",
   };
 
-  // Deploy MockPriceFeed for each stock (price in USD, 8 decimals)
-  // TSLA ~$180, AMZN ~$185, PLTR ~$25 (testnet mock values)
-  const MockPriceFeed = await hre.ethers.getContractFactory("MockPriceFeed");
-  const tslaMock = await MockPriceFeed.deploy(18000000000n, 8); // $180.00
-  await tslaMock.waitForDeployment();
-  console.log("TSLA MockPriceFeed:", await tslaMock.getAddress());
+  // Chainlink Data Feed proxy addresses on Robinhood Chain Mainnet (chainId 4663).
+  // Verified on-chain via description()/aggregator()/latestRoundData() eth_calls,
+  // not taken from documentation alone.
+  const CHAINLINK_FEEDS = {
+    TSLA: "0x4A1166a659A55625345e9515b32adECea5547C38",
+    AMZN: "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C",
+    PLTR: "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c",
+    AMD:  "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72",
+    NVDA: "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+  };
 
-  const amznMock = await MockPriceFeed.deploy(18500000000n, 8); // $185.00
-  await amznMock.waitForDeployment();
-  console.log("AMZN MockPriceFeed:", await amznMock.getAddress());
+  // Equity feeds only update during market hours; allow up to 3 days of
+  // staleness so weekend/holiday closures don't brick lockMarket/settleMarket.
+  const MAX_STALENESS_SECONDS = 3n * 24n * 60n * 60n;
 
-  const pltrMock = await MockPriceFeed.deploy(2500000000n, 8); // $25.00
-  await pltrMock.waitForDeployment();
-  console.log("PLTR MockPriceFeed:", await pltrMock.getAddress());
-
-  const nflxMock = await MockPriceFeed.deploy(95000000000n, 8); // $950.00
-  await nflxMock.waitForDeployment();
-  console.log("NFLX MockPriceFeed:", await nflxMock.getAddress());
-
-  const amdMock = await MockPriceFeed.deploy(17000000000n, 8); // $170.00
-  await amdMock.waitForDeployment();
-  console.log("AMD MockPriceFeed:", await amdMock.getAddress());
+  const ChainlinkPriceFeed = await hre.ethers.getContractFactory("ChainlinkPriceFeed");
+  const feedWrappers = {};
+  for (const symbol of Object.keys(CHAINLINK_FEEDS)) {
+    const wrapper = await ChainlinkPriceFeed.deploy(CHAINLINK_FEEDS[symbol], MAX_STALENESS_SECONDS);
+    await wrapper.waitForDeployment();
+    feedWrappers[symbol] = await wrapper.getAddress();
+    console.log(`${symbol} ChainlinkPriceFeed wrapper:`, feedWrappers[symbol]);
+  }
 
   // Deploy main contract
   const Market = await hre.ethers.getContractFactory("StockPredictionMarket");
@@ -45,24 +48,18 @@ async function main() {
 
   // Create initial markets (1 hour duration)
   const duration = 3600n;
-  await market.createMarket(STOCK_TOKENS.TSLA, await tslaMock.getAddress(), "TSLA", duration);
-  console.log("TSLA market created (ID: 0)");
-  await market.createMarket(STOCK_TOKENS.AMZN, await amznMock.getAddress(), "AMZN", duration);
-  console.log("AMZN market created (ID: 1)");
-  await market.createMarket(STOCK_TOKENS.PLTR, await pltrMock.getAddress(), "PLTR", duration);
-  console.log("PLTR market created (ID: 2)");
-  await market.createMarket(STOCK_TOKENS.NFLX, await nflxMock.getAddress(), "NFLX", duration);
-  console.log("NFLX market created");
-  await market.createMarket(STOCK_TOKENS.AMD, await amdMock.getAddress(), "AMD", duration);
-  console.log("AMD market created");
+  let marketId = 0;
+  for (const symbol of Object.keys(STOCK_TOKENS)) {
+    await market.createMarket(STOCK_TOKENS[symbol], feedWrappers[symbol], symbol, duration);
+    console.log(`${symbol} market created (ID: ${marketId})`);
+    marketId++;
+  }
 
   console.log("\n=== Deployment Summary ===");
   console.log("StockPredictionMarket:", marketAddr);
-  console.log("TSLA feed:", await tslaMock.getAddress());
-  console.log("AMZN feed:", await amznMock.getAddress());
-  console.log("PLTR feed:", await pltrMock.getAddress());
-  console.log("NFLX feed:", await nflxMock.getAddress());
-  console.log("AMD feed:", await amdMock.getAddress());
+  for (const symbol of Object.keys(STOCK_TOKENS)) {
+    console.log(`${symbol} feed wrapper:`, feedWrappers[symbol]);
+  }
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
