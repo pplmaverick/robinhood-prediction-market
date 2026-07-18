@@ -3,7 +3,7 @@ const hre = require("hardhat");
 // StockPredictionMarket（Robinhood Chain Mainnet, chainId 4663）
 const MARKET_CONTRACT = "0x72DAb8B1B53b3CF028e9A0d1E21178981f264245";
 
-const DURATION = 86400n; // 1 day
+const DURATION = 604800n; // 7 days
 
 // 股票代幣 + ChainlinkPriceFeed wrapper 地址（皆為 mainnet，來源：README.md / deploy.js）
 const MARKETS = [
