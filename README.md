@@ -31,20 +31,20 @@ graph TD
     FE["Frontend\nReact + wagmi"]
     Contract["StockPredictionMarket\n0x72DAb8B1..."]
     Oracle["Chainlink Price Feed\nTSLA/AMZN/PLTR/AMD/NVDA"]
-    Owner["👤 Owner/Keeper\n0xed2B5717..."]
-    Result["Settlement Result\nParimutuel 2% fee"]
-    TIE["TIE\nopenPrice == closePrice"]
+    Owner["👤 Owner/Keeper\n0xed2B5717...\ncreateMarket · lockMarket · settleMarket"]
+    Result["Settlement Result\nParimutuel · 2% fee"]
+    TIE["TIE*\nopenPrice == closePrice"]
 
     User -->|"placeBet()"| FE
-    FE -->|"wagmi tx"| Contract
+    FE --> Contract
     User -->|"claimWinnings()"| Contract
-    Owner -->|"createMarket / lockMarket / settleMarket"| Contract
-    Contract -->|"latestRoundData()"| Oracle
-    Oracle -->|"price data"| Contract
+    Owner --> Contract
+    Contract --> Oracle
+    Oracle --> Contract
     Contract -->|"close > open"| Result
     Contract -->|"close < open"| Result
     Contract --> TIE
-    TIE -->|"BULL default*"| Result
+    TIE -->|"BULL default"| Result
     Result -->|"payout"| User
 
     style Contract fill:#1a1a2e,color:#00ff88
