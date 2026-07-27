@@ -38,9 +38,7 @@ graph TD
     User -->|"placeBet()"| FE
     FE -->|"wagmi tx"| Contract
     User -->|"claimWinnings()"| Contract
-    Owner -->|"createMarket()\nstores openPrice"| Contract
-    Owner -->|"lockMarket()"| Contract
-    Owner -->|"settleMarket()"| Contract
+    Owner -->|"createMarket / lockMarket / settleMarket"| Contract
     Contract -->|"latestRoundData()"| Oracle
     Oracle -->|"price data"| Contract
     Contract -->|"close > open"| Result
