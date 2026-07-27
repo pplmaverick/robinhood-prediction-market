@@ -26,34 +26,33 @@ No order book, no counterparty risk. BULL and BEAR pools accumulate independentl
 ## Architecture
 
 ```mermaid
-graph LR
+graph TD
     User["👤 User"]
-    Frontend["Frontend<br/>(React + wagmi)"]
-    Contract["StockPredictionMarket<br/>0x72DAb8B1..."]
-    Chainlink["Chainlink Price Feed<br/>(TSLA/AMZN/PLTR/AMD/NVDA)"]
-    Owner["👤 Owner / Keeper<br/>0xed2B5717..."]
+    FE["Frontend\nReact + wagmi"]
+    Contract["StockPredictionMarket\n0x72DAb8B1..."]
+    Oracle["Chainlink Price Feed\nTSLA/AMZN/PLTR/AMD/NVDA"]
+    Owner["👤 Owner/Keeper\n0xed2B5717..."]
+    Result["Settlement Result\nParimutuel 2% fee"]
+    TIE["TIE\nopenPrice == closePrice"]
 
-    User -->|"placeBet()"| Frontend
-    Frontend -->|"wagmi tx"| Contract
+    User -->|"placeBet()"| FE
+    FE -->|"wagmi tx"| Contract
     User -->|"claimWinnings()"| Contract
-
-    Owner -->|"stores openPrice"| Contract
-    Owner -->|"OPEN → LOCKED"| Contract
-    Owner -->|"reads closePrice"| Contract
-
-    Contract -->|"latestRoundData()"| Chainlink
-    Chainlink -->|"openPrice / closePrice"| Contract
-
-    Contract -->|"BULL: close > open"| Result["Settlement Result"]
-    Contract -->|"BEAR: close < open"| Result
-    Contract --> Tie["TIE: openPrice == closePrice"]
-    Tie -->|"BULL default*"| Result
-
-    Result -->|"parimutuel payout (2% fee)"| User
+    Owner -->|"createMarket()\nstores openPrice"| Contract
+    Owner -->|"lockMarket()"| Contract
+    Owner -->|"settleMarket()"| Contract
+    Contract -->|"latestRoundData()"| Oracle
+    Oracle -->|"price data"| Contract
+    Contract -->|"close > open"| Result
+    Contract -->|"close < open"| Result
+    Contract --> TIE
+    TIE -->|"BULL default*"| Result
+    Result -->|"payout"| User
 
     style Contract fill:#1a1a2e,color:#00ff88
-    style Chainlink fill:#375bd2,color:#ffffff
+    style Oracle fill:#375bd2,color:#ffffff
     style Result fill:#2d2d2d,color:#ffcc00
+    style TIE fill:#3d1a1a,color:#ff6666
 ```
 
 > *Known issue: TIE defaults to BULL win. Will be fixed to full refund in W5 contract upgrade.
