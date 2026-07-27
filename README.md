@@ -25,24 +25,37 @@ No order book, no counterparty risk. BULL and BEAR pools accumulate independentl
 
 ## Architecture
 
+```mermaid
+graph TD
+    User["👤 User"]
+    Frontend["Frontend<br/>(React + wagmi)"]
+    Contract["StockPredictionMarket<br/>0x72DAb8B1..."]
+    Chainlink["Chainlink Price Feed<br/>(TSLA/AMZN/PLTR/AMD/NVDA)"]
+    Owner["👤 Owner / Keeper<br/>0xed2B5717..."]
+
+    User -->|"placeBet(marketId, BULL/BEAR) + ETH"| Frontend
+    Frontend -->|"wagmi sendTransaction"| Contract
+    User -->|"claimWinnings(marketId)"| Contract
+
+    Owner -->|"createMarket() → reads & stores openPrice"| Contract
+    Owner -->|"lockMarket() → status: OPEN → LOCKED"| Contract
+    Owner -->|"settleMarket() → reads closePrice → compare"| Contract
+
+    Contract -->|"latestRoundData()"| Chainlink
+    Chainlink -->|"openPrice / closePrice"| Contract
+
+    Contract -->|"BULL wins: closePrice > openPrice"| Result["Settlement Result"]
+    Contract -->|"BEAR wins: closePrice < openPrice"| Result
+    Contract -->|"TIE: openPrice == closePrice → BULL default*"| Result
+
+    Result -->|"parimutuel payout (2% fee)"| User
+
+    style Contract fill:#1a1a2e,color:#00ff88
+    style Chainlink fill:#375bd2,color:#ffffff
+    style Result fill:#2d2d2d,color:#ffcc00
 ```
-User
- |
- |-- placeBet(marketId, BULL/BEAR) --> StockPredictionMarket
- |                                           |
- |                                    +--------------+
- |                                    |    Market    |
- |                                    |    struct    |
- |                                    +------+-------+
- |                                           |
- |                   stockToken (RH Chain          ChainlinkPriceFeed
- |                   native TSLA/AMZN/...)          (AggregatorV3Interface)
- |                                                         |
- |                                               Chainlink Official Feed
- |                                               (live price, 8 decimals)
- |
- +-- claimWinnings(marketId) <-- parimutuel payout (2% fee)
-```
+
+> *TIE 預設 BULL 贏為已知問題，W5 升級合約時修正為全額退款。
 
 ## Deployed Contracts
 
