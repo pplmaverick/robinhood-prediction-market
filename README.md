@@ -26,26 +26,26 @@ No order book, no counterparty risk. BULL and BEAR pools accumulate independentl
 ## Architecture
 
 ```mermaid
-graph TD
+graph LR
     User["👤 User"]
     Frontend["Frontend<br/>(React + wagmi)"]
     Contract["StockPredictionMarket<br/>0x72DAb8B1..."]
     Chainlink["Chainlink Price Feed<br/>(TSLA/AMZN/PLTR/AMD/NVDA)"]
     Owner["👤 Owner / Keeper<br/>0xed2B5717..."]
 
-    User -->|"placeBet(marketId, BULL/BEAR) + ETH"| Frontend
-    Frontend -->|"wagmi sendTransaction"| Contract
-    User -->|"claimWinnings(marketId)"| Contract
+    User -->|"placeBet()"| Frontend
+    Frontend -->|"wagmi tx"| Contract
+    User -->|"claimWinnings()"| Contract
 
-    Owner -->|"createMarket() → stores openPrice"| Contract
-    Owner -->|"lockMarket() → OPEN → LOCKED"| Contract
-    Owner -->|"settleMarket() → reads closePrice"| Contract
+    Owner -->|"stores openPrice"| Contract
+    Owner -->|"OPEN → LOCKED"| Contract
+    Owner -->|"reads closePrice"| Contract
 
     Contract -->|"latestRoundData()"| Chainlink
     Chainlink -->|"openPrice / closePrice"| Contract
 
-    Contract -->|"BULL wins: closePrice > openPrice"| Result["Settlement Result"]
-    Contract -->|"BEAR wins: closePrice < openPrice"| Result
+    Contract -->|"BULL: close > open"| Result["Settlement Result"]
+    Contract -->|"BEAR: close < open"| Result
     Contract --> Tie["TIE: openPrice == closePrice"]
     Tie -->|"BULL default*"| Result
 
