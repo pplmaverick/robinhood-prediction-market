@@ -37,16 +37,17 @@ graph TD
     Frontend -->|"wagmi sendTransaction"| Contract
     User -->|"claimWinnings(marketId)"| Contract
 
-    Owner -->|"createMarket() → reads & stores openPrice"| Contract
-    Owner -->|"lockMarket() → status: OPEN → LOCKED"| Contract
-    Owner -->|"settleMarket() → reads closePrice → compare"| Contract
+    Owner -->|"createMarket() → stores openPrice"| Contract
+    Owner -->|"lockMarket() → OPEN → LOCKED"| Contract
+    Owner -->|"settleMarket() → reads closePrice"| Contract
 
     Contract -->|"latestRoundData()"| Chainlink
     Chainlink -->|"openPrice / closePrice"| Contract
 
     Contract -->|"BULL wins: closePrice > openPrice"| Result["Settlement Result"]
     Contract -->|"BEAR wins: closePrice < openPrice"| Result
-    Contract -->|"TIE: openPrice == closePrice → BULL default*"| Result
+    Contract --> Tie["TIE: openPrice == closePrice"]
+    Tie -->|"BULL default*"| Result
 
     Result -->|"parimutuel payout (2% fee)"| User
 
@@ -55,7 +56,7 @@ graph TD
     style Result fill:#2d2d2d,color:#ffcc00
 ```
 
-> *TIE 預設 BULL 贏為已知問題，W5 升級合約時修正為全額退款。
+> *Known issue: TIE defaults to BULL win. Will be fixed to full refund in W5 contract upgrade.
 
 ## Deployed Contracts
 
