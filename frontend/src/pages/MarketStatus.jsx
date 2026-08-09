@@ -1,4 +1,4 @@
-import { useMemo } from 'react'
+import { useMemo, useState } from 'react'
 import { useReadContract, useReadContracts } from 'wagmi'
 import { formatEther, formatUnits } from 'viem'
 import { MARKET_ADDRESS, MARKET_ABI, STOCKS, STATE } from '../constants'
@@ -22,6 +22,8 @@ function stockByToken(token) {
 }
 
 export default function MarketStatus() {
+  const [showAll, setShowAll] = useState(false)
+
   const { data: marketCount } = useReadContract({
     address: MARKET_ADDRESS,
     abi:     MARKET_ABI,
@@ -71,6 +73,8 @@ export default function MarketStatus() {
   }
   const totalEthLocked = markets.reduce((a, m) => a + m.bullPool + m.bearPool, 0n)
 
+  const displayed = showAll ? markets : markets.filter(m => m.state === STATE.OPEN)
+
   return (
     <main className="max-w-container-max mx-auto px-gutter py-8">
 
@@ -107,6 +111,12 @@ export default function MarketStatus() {
           <span className="font-data-sm text-on-surface-variant ml-auto">
             Contract: {MARKET_ADDRESS.slice(0, 10)}…
           </span>
+          <button
+            onClick={() => setShowAll(v => !v)}
+            className="font-label-caps text-sm px-3 py-1 rounded border border-outline text-on-surface-variant hover:text-on-surface transition-colors"
+          >
+            {showAll ? 'Show Open Only' : 'Show All'}
+          </button>
         </div>
 
         <div className="overflow-x-auto no-scrollbar">
@@ -129,7 +139,19 @@ export default function MarketStatus() {
                     {marketCount == null ? 'Loading…' : 'No markets found.'}
                   </td>
                 </tr>
-              ) : [...markets].reverse().map(m => {
+              ) : displayed.length === 0 ? (
+                <tr>
+                  <td colSpan={10} className="px-4 py-16 text-center text-on-surface-variant font-body-sm">
+                    No open markets.{' '}
+                    <button
+                      onClick={() => setShowAll(true)}
+                      className="text-tertiary-fixed-dim hover:text-primary transition-colors underline"
+                    >
+                      Show all markets
+                    </button>
+                  </td>
+                </tr>
+              ) : [...displayed].reverse().map(m => {
                 const s = stockByToken(m.stockToken)
                 const closeDate = m.closeTime
                   ? new Date(Number(m.closeTime) * 1000).toLocaleString('en-US', {

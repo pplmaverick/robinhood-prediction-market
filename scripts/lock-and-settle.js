@@ -1,5 +1,5 @@
 // scripts/lock-and-settle.js
-// 對主網 Markets #5-9 依序執行 lockMarket() → settleMarket()
+// 對主網 Markets #20-24 依序執行 lockMarket() → settleMarket()
 // 每筆交易送出後都會等待鏈上確認，再送下一筆
 //
 // 執行：npx hardhat run scripts/lock-and-settle.js --network robinhoodMainnet
@@ -7,7 +7,7 @@
 const hre = require("hardhat");
 
 const CONTRACT = "0x72DAb8B1B53b3CF028e9A0d1E21178981f264245";
-const MARKET_IDS = [10, 11, 12, 13, 14];
+const MARKET_IDS = [20, 21, 22, 23, 24];
 
 const MARKET_ABI = [
   "function lockMarket(uint256 marketId) external",
