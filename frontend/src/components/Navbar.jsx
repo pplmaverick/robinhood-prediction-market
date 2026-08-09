@@ -13,6 +13,35 @@ export default function Navbar() {
 
   const isWrongNetwork = isConnected && chainId !== robinhoodMainnet.id
 
+  const handleSwitchChain = async () => {
+    try {
+      await window.ethereum.request({
+        method: 'wallet_switchEthereumChain',
+        params: [{ chainId: '0x1237' }], // 4663 in hex
+      })
+    } catch (switchError) {
+      // 4902 = chain not added yet
+      if (switchError.code === 4902) {
+        try {
+          await window.ethereum.request({
+            method: 'wallet_addEthereumChain',
+            params: [{
+              chainId: '0x1237',
+              chainName: 'Robinhood Chain',
+              nativeCurrency: { name: 'ETH', symbol: 'ETH', decimals: 18 },
+              rpcUrls: ['https://rpc.mainnet.chain.robinhood.com'],
+              blockExplorerUrls: ['https://robinhoodchain.blockscout.com'],
+            }],
+          })
+        } catch (addError) {
+          console.error('Failed to add chain:', addError)
+        }
+      } else {
+        console.error('Failed to switch chain:', switchError)
+      }
+    }
+  }
+
   const navCls = ({ isActive }) =>
     isActive
       ? 'text-tertiary-fixed-dim font-bold font-label-caps uppercase tracking-widest transition-colors'
@@ -53,7 +82,7 @@ export default function Navbar() {
 
             {isWrongNetwork ? (
               <button
-                onClick={() => switchChain({ chainId: robinhoodMainnet.id })}
+                onClick={handleSwitchChain}
                 className="bg-secondary text-on-secondary-container font-label-caps px-4 py-2 rounded-lg border border-secondary hover:brightness-110 active:scale-95 transition-all flex items-center gap-2"
               >
                 <span className="material-symbols-outlined" style={{ fontSize: 16 }}>warning</span>

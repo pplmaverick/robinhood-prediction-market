@@ -1,7 +1,7 @@
 import { useMemo } from 'react'
 import {
   useReadContract, useReadContracts, useWriteContract,
-  useWaitForTransactionReceipt, useAccount,
+  useWaitForTransactionReceipt, useAccount, useChainId,
 } from 'wagmi'
 import { formatEther, formatUnits } from 'viem'
 import { MARKET_ADDRESS, MARKET_ABI, STOCKS, STATE, FEE_BPS } from '../constants'
@@ -40,6 +40,7 @@ function ClaimButton({ marketId, onSuccess }) {
     hash: txHash,
     query: { enabled: !!txHash },
   })
+  const chainId = useChainId()
 
   if (isSuccess) {
     return (
@@ -59,12 +60,19 @@ function ClaimButton({ marketId, onSuccess }) {
   }
   return (
     <button
-      onClick={() => writeContract({
-        address: MARKET_ADDRESS,
-        abi:     MARKET_ABI,
-        functionName: 'claimWinnings',
-        args:    [BigInt(marketId)],
-      })}
+      onClick={() => {
+        // 確保在正確鏈上才能 claim
+        if (chainId !== 4663) {
+          alert('Please switch to Robinhood Chain (Chain ID 4663) before claiming.')
+          return
+        }
+        writeContract({
+          address: MARKET_ADDRESS,
+          abi:     MARKET_ABI,
+          functionName: 'claimWinnings',
+          args:    [BigInt(marketId)],
+        })
+      }}
       className="bg-tertiary-container text-on-tertiary-container font-label-caps px-4 py-1.5 hover:bg-tertiary-fixed transition-colors active:scale-95 rounded"
     >
       Claim
