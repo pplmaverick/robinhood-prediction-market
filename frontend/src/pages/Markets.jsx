@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect } from 'react'
+import { useState, useMemo, useEffect, useRef } from 'react'
 import {
   useReadContract, useReadContracts, useWriteContract,
   useWaitForTransactionReceipt, useAccount, useBalance, usePublicClient,
@@ -47,6 +47,7 @@ export default function Markets() {
   const [betSide, setBetSide]         = useState('BULL')
   const [betAmount, setBetAmount]     = useState('')
   const [logs, setLogs]               = useState([])
+  const hasAutoSelected               = useRef(false)
 
   const { address, isConnected } = useAccount()
   const { data: balance }        = useBalance({ address })
@@ -111,6 +112,17 @@ export default function Markets() {
       })
       .filter(Boolean)
   }, [marketsRaw])
+
+  // default tab selection to the first OPEN market on initial load; leave
+  // manual tab clicks alone afterward and fall back to TSLA if none are open
+  useEffect(() => {
+    if (hasAutoSelected.current || markets.length === 0) return
+    hasAutoSelected.current = true
+    const openMarket = markets.find(m => m.state === STATE.OPEN)
+    if (!openMarket) return
+    const idx = STOCKS.findIndex(s => s.token.toLowerCase() === openMarket.stockToken.toLowerCase())
+    if (idx !== -1) setSelectedIdx(idx)
+  }, [markets])
 
   const stockMarkets = markets.filter(
     m => m.stockToken.toLowerCase() === selectedStock.token.toLowerCase()
