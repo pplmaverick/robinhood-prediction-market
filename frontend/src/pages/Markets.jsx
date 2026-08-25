@@ -47,7 +47,13 @@ export default function Markets() {
   const [betSide, setBetSide]         = useState('BULL')
   const [betAmount, setBetAmount]     = useState('')
   const [logs, setLogs]               = useState([])
+  const [nowSec, setNowSec]           = useState(() => Math.floor(Date.now() / 1000))
   const hasAutoSelected               = useRef(false)
+
+  useEffect(() => {
+    const id = setInterval(() => setNowSec(Math.floor(Date.now() / 1000)), 1000)
+    return () => clearInterval(id)
+  }, [])
 
   const { address, isConnected } = useAccount()
   const { data: balance }        = useBalance({ address })
@@ -131,6 +137,10 @@ export default function Markets() {
     stockMarkets.filter(m => m.state === STATE.OPEN)
                 .sort((a, b) => Number(b.closeTime - a.closeTime))[0]
     ?? stockMarkets.at(-1)
+
+  const isExpired = activeMarket != null
+    && activeMarket.state === STATE.OPEN
+    && Number(activeMarket.closeTime) <= nowSec
 
   // ── prices ───────────────────────────────────────────────────────────────
 
@@ -525,6 +535,10 @@ export default function Markets() {
                   <p className="text-center font-body-sm text-secondary py-2">
                     No open market for {selectedStock.symbol}.
                   </p>
+                ) : isExpired ? (
+                  <p className="text-center font-body-sm text-secondary py-2">
+                    Betting closed — awaiting settlement.
+                  </p>
                 ) : confirmed ? (
                   <div className="w-full py-4 bg-surface-container-high text-primary font-headline-md rounded-lg text-center flex items-center justify-center gap-2">
                     <span className="material-symbols-outlined">check_circle</span>
@@ -545,7 +559,7 @@ export default function Markets() {
                 ) : (
                   <button
                     onClick={handleBet}
-                    disabled={isPending || isConfirming || !betAmount || Number(betAmount) < 0.001}
+                    disabled={isPending || isConfirming || isExpired || !betAmount || Number(betAmount) < 0.001}
                     className="w-full py-4 bg-primary text-on-primary-container font-headline-md rounded-lg hover:brightness-110 active:scale-[0.98] transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
                     {isPending || isConfirming ? (
