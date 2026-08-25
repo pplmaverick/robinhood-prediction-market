@@ -15,7 +15,8 @@ export default function Countdown({ closeTime }) {
 
   if (!closeTime) return <span className="font-data-md text-on-surface-variant">—</span>
 
-  const h = Math.floor(remaining / 3600)
+  const d = Math.floor(remaining / 86400)
+  const h = Math.floor((remaining % 86400) / 3600)
   const m = Math.floor((remaining % 3600) / 60)
   const s = remaining % 60
   const fmt = (n) => String(n).padStart(2, '0')
@@ -26,7 +27,7 @@ export default function Countdown({ closeTime }) {
 
   return (
     <span className="font-data-md text-tertiary-fixed-dim tabular-nums">
-      {h > 0 && `${fmt(h)}:`}{fmt(m)}:{fmt(s)}
+      {d > 0 && `${d}d `}{fmt(h)}:{fmt(m)}:{fmt(s)}
     </span>
   )
 }
