@@ -7,8 +7,8 @@ const DURATION = 1209600n; // 14 days
 
 // 股票代幣 + ChainlinkPriceFeed wrapper 地址（皆為 mainnet，來源：README.md / deploy.js）
 const MARKETS = [
-  { symbol: "PLTR", token: "0x894E1EC2D74FFE5AEF8Dc8A9e84686acCB964F2A", priceFeed: "0xBdC53E50b1167cE1199bFaD54A034f7ab1741051" },
-  { symbol: "AMD",  token: "0x86923f96303D656E4aa86D9d42D1e57ad2023fdC", priceFeed: "0x15636CE4C0EdE55335f84E6386f8F49C897c077d" },
+  { symbol: "TSLA", token: "0x322F0929c4625eD5bAd873c95208D54E1c003b2d", priceFeed: "0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f" },
+  { symbol: "AMZN", token: "0x12f190a9F9d7D37a250758b26824B97CE941bF54", priceFeed: "0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953" },
 ];
 
 const ABI = [
@@ -39,7 +39,7 @@ async function main() {
     console.log(`  tx hash   = ${receipt.hash}`);
   }
 
-  console.log("\n✅ 5 個市場建立完成");
+  console.log(`\n✅ ${MARKETS.length} 個市場建立完成`);
 }
 
 main().catch((e) => { console.error(e); process.exit(1); });
