@@ -9,6 +9,36 @@ A parimutuel stock prediction market built on Robinhood Chain Mainnet, using nat
 
 **[Live Demo](https://frontend-tau-azure-50.vercel.app)** · Network: Robinhood Chain Mainnet (Chain ID 4663)
 
+## What's New vs. Existing
+
+### Existing (pre-hackathon)
+
+- **Parimutuel prediction market contract** — live on Robinhood Chain Mainnet
+  (Chain ID 4663) since July 3, 2026 (`b7b2071`, `d45fb8e`). Real on-chain
+  history to date: 29 `createMarket`, 27 `lockMarket`, 27 `settleMarket`,
+  3 `placeBet`, 1 `claimWinnings` (independently counted, `da13c80`).
+- **React + wagmi frontend**, deployed to Vercel (`f40f9a1`, `0e2688d`,
+  through subsequent fixes to `17c4ba9`).
+- **VPS-based keeper** for `lockMarket`/`settleMarket` operation (`664d535`,
+  `b4748f6`, and other `maint:` commits).
+- **Independent settlement verification layer** (`da13c80`, added
+  September 3, 2026 ahead of Continuity Track submission): a Python
+  reference model derived from the contract's external spec/ABI, cross-checked
+  against all 27 real `settleMarket` transactions and the 1 real
+  `claimWinnings` transaction pulled directly from chain. 28/28 match; trace
+  sealed via SHA-256 (`verification/settlement/commitments.sha256`).
+  Findings: no decimals-normalization in the price-read path (dormant to
+  date); README's claimed no-winner refund path has no implementation
+  (never triggered); all real settlements to date resolved via
+  tie-defaults-to-BULL rather than genuine price movement. Full detail in
+  `verification/settlement/comparison_report.md`.
+
+### New (this hackathon — Continuity Track)
+
+- [ ] World AgentKit integration — _placeholder, not yet written_
+- [ ] Graph computation layer — _placeholder, not yet written_
+- [ ] Decision engine reference model — _placeholder, not yet written_
+
 ## Core Features
 
 **Chain-Native Stock Token Integration**
