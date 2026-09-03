@@ -1,0 +1,67 @@
+{
+  "TSLA": {
+    "wrapper": "0x072A3A0C04Cf8CDcaf5B4A73a4Ed4fF5A841531f",
+    "maxStaleness": 259200,
+    "aggregator": "0x4A1166a659A55625345e9515b32adECea5547C38",
+    "decimals": 8,
+    "latestRoundData": [
+      18446744073709552680,
+      35904999999,
+      1788405710,
+      1788405722,
+      18446744073709552680
+    ]
+  },
+  "AMZN": {
+    "wrapper": "0xcAC5B9d2817325E78090E3Ce4b9C299C819cF953",
+    "maxStaleness": 259200,
+    "aggregator": "0xD5a1508ceD74c084eBf3cBe853e2C968fB2a651C",
+    "decimals": 8,
+    "latestRoundData": [
+      18446744073709552316,
+      25623810000,
+      1788393264,
+      1788393277,
+      18446744073709552316
+    ]
+  },
+  "PLTR": {
+    "wrapper": "0xBdC53E50b1167cE1199bFaD54A034f7ab1741051",
+    "maxStaleness": 259200,
+    "aggregator": "0x820ABedFF239034956B7A9d2F0a331f9F075eB4c",
+    "decimals": 8,
+    "latestRoundData": [
+      18446744073709553345,
+      17019500000,
+      1788398444,
+      1788398457,
+      18446744073709553345
+    ]
+  },
+  "AMD": {
+    "wrapper": "0x15636CE4C0EdE55335f84E6386f8F49C897c077d",
+    "maxStaleness": 259200,
+    "aggregator": "0x943A29E7ae51A4798823ca9eEd2ed533B2A22C72",
+    "decimals": 8,
+    "latestRoundData": [
+      18446744073709554178,
+      45663145000,
+      1788367195,
+      1788367208,
+      18446744073709554178
+    ]
+  },
+  "NVDA": {
+    "wrapper": "0x914c40a644493b47336de847b0404E729e06C68d",
+    "maxStaleness": 259200,
+    "aggregator": "0x379EC4f7C378F34a1B47E4F3cbeBCbAC3E8E9F15",
+    "decimals": 8,
+    "latestRoundData": [
+      18446744073709552582,
+      22514395000,
+      1788384459,
+      1788384472,
+      18446744073709552582
+    ]
+  }
+}

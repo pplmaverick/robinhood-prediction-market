@@ -1,0 +1,1468 @@
+[
+  {
+    "marketId": 0,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "2173b62845437d6a3bbda163563c289c53a12c3c12b3fac344d2266743dfe6fb",
+        "blockNumber": 1794230,
+        "marketId": 0,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1783067931,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "72dfb09e327c90fbd238afc14fdafbbd2263b64f3afc2f9d2359beaf127b61c3",
+        "blockNumber": 1841355,
+        "marketId": 0,
+        "openPrice": 39305000000,
+        "timestamp": 1783077471,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "c49cef06d10a000b5dea6cc5999f419d0bc1378cc46f4cabf9ba97a8148310da",
+        "blockNumber": 1841386,
+        "marketId": 0,
+        "closePrice": 39305000000,
+        "winner": 0,
+        "timestamp": 1783077475,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "2173b62845437d6a3bbda163563c289c53a12c3c12b3fac344d2266743dfe6fb",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 3600,
+    "createBlock": 1794230,
+    "createTimestamp": 1783067931,
+    "openPrice": 39305000000,
+    "lockBlock": 1841355,
+    "lockTimestamp": 1783077471,
+    "lockTxHash": "72dfb09e327c90fbd238afc14fdafbbd2263b64f3afc2f9d2359beaf127b61c3",
+    "closePrice": 39305000000,
+    "winner": 0,
+    "settleBlock": 1841386,
+    "settleTimestamp": 1783077475,
+    "settleTxHash": "c49cef06d10a000b5dea6cc5999f419d0bc1378cc46f4cabf9ba97a8148310da"
+  },
+  {
+    "marketId": 1,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "0f9ddda7e9dd873cf0601557af7c2a3facbef13a9f885452fb02dd41f5884ba2",
+        "blockNumber": 1794246,
+        "marketId": 1,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1783067935,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "3079523243f4806546c26d57e44c6862de2e78938ec7c8756265645a30821177",
+        "blockNumber": 1841405,
+        "marketId": 1,
+        "openPrice": 24336000000,
+        "timestamp": 1783077478,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "3735311dc07c1758da1900210839c53df0d8e06dc6b4a0addfadd3f5b1f7be8d",
+        "blockNumber": 1841423,
+        "marketId": 1,
+        "closePrice": 24336000000,
+        "winner": 0,
+        "timestamp": 1783077482,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "0f9ddda7e9dd873cf0601557af7c2a3facbef13a9f885452fb02dd41f5884ba2",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 3600,
+    "createBlock": 1794246,
+    "createTimestamp": 1783067935,
+    "openPrice": 24336000000,
+    "lockBlock": 1841405,
+    "lockTimestamp": 1783077478,
+    "lockTxHash": "3079523243f4806546c26d57e44c6862de2e78938ec7c8756265645a30821177",
+    "closePrice": 24336000000,
+    "winner": 0,
+    "settleBlock": 1841423,
+    "settleTimestamp": 1783077482,
+    "settleTxHash": "3735311dc07c1758da1900210839c53df0d8e06dc6b4a0addfadd3f5b1f7be8d"
+  },
+  {
+    "marketId": 2,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "8ee1ced8e32a142068261c9a15172f6f069567648956e50fbbd0ccd0454eb6e1",
+        "blockNumber": 1794275,
+        "marketId": 2,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1783067939,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "a7ea49e5061502aba9f53a050749da4c82df3ef0a05d4b518b67633ac6498fb8",
+        "blockNumber": 1841430,
+        "marketId": 2,
+        "openPrice": 12952500000,
+        "timestamp": 1783077486,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "d751aee828628c483a6456142b1a43855223c7928d0f7bae9b48d42904873f96",
+        "blockNumber": 1841447,
+        "marketId": 2,
+        "closePrice": 12952500000,
+        "winner": 0,
+        "timestamp": 1783077490,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "8ee1ced8e32a142068261c9a15172f6f069567648956e50fbbd0ccd0454eb6e1",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 3600,
+    "createBlock": 1794275,
+    "createTimestamp": 1783067939,
+    "openPrice": 12952500000,
+    "lockBlock": 1841430,
+    "lockTimestamp": 1783077486,
+    "lockTxHash": "a7ea49e5061502aba9f53a050749da4c82df3ef0a05d4b518b67633ac6498fb8",
+    "closePrice": 12952500000,
+    "winner": 0,
+    "settleBlock": 1841447,
+    "settleTimestamp": 1783077490,
+    "settleTxHash": "d751aee828628c483a6456142b1a43855223c7928d0f7bae9b48d42904873f96"
+  },
+  {
+    "marketId": 3,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "9c8c9f9f509e59a5a01f8028b1d1afd25b3e917f94abb9b0dc377baebf5bab5e",
+        "blockNumber": 1794293,
+        "marketId": 3,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1783067942,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "d628ee6565575b194ee20f80daa3ad2072f6bd196acd0414d6b530eacac92e20",
+        "blockNumber": 1841470,
+        "marketId": 3,
+        "openPrice": 52076955000,
+        "timestamp": 1783077495,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "aaa2ff2ab8d1fd92059e26baa209040672c2838b711b17d2105c9e1fe5f06cc4",
+        "blockNumber": 1841487,
+        "marketId": 3,
+        "closePrice": 52076955000,
+        "winner": 0,
+        "timestamp": 1783077497,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "9c8c9f9f509e59a5a01f8028b1d1afd25b3e917f94abb9b0dc377baebf5bab5e",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 3600,
+    "createBlock": 1794293,
+    "createTimestamp": 1783067942,
+    "openPrice": 52076955000,
+    "lockBlock": 1841470,
+    "lockTimestamp": 1783077495,
+    "lockTxHash": "d628ee6565575b194ee20f80daa3ad2072f6bd196acd0414d6b530eacac92e20",
+    "closePrice": 52076955000,
+    "winner": 0,
+    "settleBlock": 1841487,
+    "settleTimestamp": 1783077497,
+    "settleTxHash": "aaa2ff2ab8d1fd92059e26baa209040672c2838b711b17d2105c9e1fe5f06cc4"
+  },
+  {
+    "marketId": 4,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "c7745300eff6d293ef59cf3000b988437afead7265d275f3bbf314d7f234e384",
+        "blockNumber": 1794315,
+        "marketId": 4,
+        "symbol": "NVDA",
+        "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "timestamp": 1783067944,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "205341340c9528c54a19dfa868caa6256d96e99fdab13408604e749908b09bb8",
+        "blockNumber": 1841507,
+        "marketId": 4,
+        "openPrice": 19456500000,
+        "timestamp": 1783077502,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "5e1a1696d707f9b307e9382847dc09123479eb035af8dfd0c6ae7a5e1f359d7f",
+        "blockNumber": 1841517,
+        "marketId": 4,
+        "closePrice": 19456500000,
+        "winner": 0,
+        "timestamp": 1783077506,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "NVDA",
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "createTxHash": "c7745300eff6d293ef59cf3000b988437afead7265d275f3bbf314d7f234e384",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "duration": 3600,
+    "createBlock": 1794315,
+    "createTimestamp": 1783067944,
+    "openPrice": 19456500000,
+    "lockBlock": 1841507,
+    "lockTimestamp": 1783077502,
+    "lockTxHash": "205341340c9528c54a19dfa868caa6256d96e99fdab13408604e749908b09bb8",
+    "closePrice": 19456500000,
+    "winner": 0,
+    "settleBlock": 1841517,
+    "settleTimestamp": 1783077506,
+    "settleTxHash": "5e1a1696d707f9b307e9382847dc09123479eb035af8dfd0c6ae7a5e1f359d7f"
+  },
+  {
+    "marketId": 5,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "8409902543d540966213bf58387f009c7b8e8aeec63b01cdeb478ccbea69e222",
+        "blockNumber": 5309932,
+        "marketId": 5,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1783609388,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "BetPlaced",
+        "txHash": "ec0c46e9015c653cb4e2910a8bb49d985dda10e95c47f26b0ea1ada7ea2c60b8",
+        "blockNumber": 5317258,
+        "marketId": 5,
+        "user": "0xed2B5717c9b936ecC76d75401026A99143e278F5",
+        "direction": 0,
+        "amount": 2000000000000000,
+        "timestamp": 1783610122,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "BetPlaced",
+        "txHash": "d90abb58a0f3b589ba71641748b3ca665ddae36f1e78ae5812d4502a6e5207ab",
+        "blockNumber": 5346212,
+        "marketId": 5,
+        "user": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9",
+        "direction": 1,
+        "amount": 3000000000000000,
+        "timestamp": 1783613023,
+        "from": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "fc171cb92a464c95041ed4c95797fa5ee34b70ad872795b6aad195f456c59e60",
+        "blockNumber": 10110496,
+        "marketId": 5,
+        "openPrice": 39682820000,
+        "timestamp": 1784090310,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "95cf61a13f3a348a0f19e4977a9205278345c4f78b214cf4b7bc2090e422eb84",
+        "blockNumber": 10110542,
+        "marketId": 5,
+        "closePrice": 39682820000,
+        "winner": 0,
+        "timestamp": 1784090314,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "WinningsClaimed",
+        "txHash": "fe9fdcfcd19a715e30342cd5b007720278226cabceb99b0dfaab4eceb69afda4",
+        "blockNumber": 31551366,
+        "marketId": 5,
+        "user": "0xed2B5717c9b936ecC76d75401026A99143e278F5",
+        "amount": 4900000000000000,
+        "timestamp": 1786239961,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "8409902543d540966213bf58387f009c7b8e8aeec63b01cdeb478ccbea69e222",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 86400,
+    "createBlock": 5309932,
+    "createTimestamp": 1783609388,
+    "bets": [
+      {
+        "user": "0xed2B5717c9b936ecC76d75401026A99143e278F5",
+        "direction": 0,
+        "amount": 2000000000000000,
+        "txHash": "ec0c46e9015c653cb4e2910a8bb49d985dda10e95c47f26b0ea1ada7ea2c60b8"
+      },
+      {
+        "user": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9",
+        "direction": 1,
+        "amount": 3000000000000000,
+        "txHash": "d90abb58a0f3b589ba71641748b3ca665ddae36f1e78ae5812d4502a6e5207ab"
+      }
+    ],
+    "openPrice": 39682820000,
+    "lockBlock": 10110496,
+    "lockTimestamp": 1784090310,
+    "lockTxHash": "fc171cb92a464c95041ed4c95797fa5ee34b70ad872795b6aad195f456c59e60",
+    "closePrice": 39682820000,
+    "winner": 0,
+    "settleBlock": 10110542,
+    "settleTimestamp": 1784090314,
+    "settleTxHash": "95cf61a13f3a348a0f19e4977a9205278345c4f78b214cf4b7bc2090e422eb84",
+    "claims": [
+      {
+        "user": "0xed2B5717c9b936ecC76d75401026A99143e278F5",
+        "amount": 4900000000000000,
+        "txHash": "fe9fdcfcd19a715e30342cd5b007720278226cabceb99b0dfaab4eceb69afda4"
+      }
+    ]
+  },
+  {
+    "marketId": 6,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "39d64614da995e64ccd001fb5bbb10177135a1806fd9eda906f95437452a0ab8",
+        "blockNumber": 5309976,
+        "marketId": 6,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1783609393,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "6dafaf1b65de725755a67260fff3b1d3d58365adada07f0f80377f0853b549c4",
+        "blockNumber": 10110591,
+        "marketId": 6,
+        "openPrice": 24733315000,
+        "timestamp": 1784090319,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "d8c3a6047bed701a685595052539a030b3339bde28c51a4e1f8bab3bd05e5120",
+        "blockNumber": 10110634,
+        "marketId": 6,
+        "closePrice": 24733315000,
+        "winner": 0,
+        "timestamp": 1784090324,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "39d64614da995e64ccd001fb5bbb10177135a1806fd9eda906f95437452a0ab8",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 86400,
+    "createBlock": 5309976,
+    "createTimestamp": 1783609393,
+    "openPrice": 24733315000,
+    "lockBlock": 10110591,
+    "lockTimestamp": 1784090319,
+    "lockTxHash": "6dafaf1b65de725755a67260fff3b1d3d58365adada07f0f80377f0853b549c4",
+    "closePrice": 24733315000,
+    "winner": 0,
+    "settleBlock": 10110634,
+    "settleTimestamp": 1784090324,
+    "settleTxHash": "d8c3a6047bed701a685595052539a030b3339bde28c51a4e1f8bab3bd05e5120"
+  },
+  {
+    "marketId": 7,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "714be8b37c7fc77ffebb80a8c819c0a2e22af38b884b7c9c017809999aa243e4",
+        "blockNumber": 5310011,
+        "marketId": 7,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1783609396,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "83d1c3d312b2805775ec07fb4e407e1e48ab39245afb064537ab24a1a954711f",
+        "blockNumber": 10110671,
+        "marketId": 7,
+        "openPrice": 13332000000,
+        "timestamp": 1784090327,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "5b848d47a4bff9be8b00ba306aa3ab7ad9787d38e233705fe807b78f28969156",
+        "blockNumber": 10110715,
+        "marketId": 7,
+        "closePrice": 13332000000,
+        "winner": 0,
+        "timestamp": 1784090332,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "714be8b37c7fc77ffebb80a8c819c0a2e22af38b884b7c9c017809999aa243e4",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 86400,
+    "createBlock": 5310011,
+    "createTimestamp": 1783609396,
+    "openPrice": 13332000000,
+    "lockBlock": 10110671,
+    "lockTimestamp": 1784090327,
+    "lockTxHash": "83d1c3d312b2805775ec07fb4e407e1e48ab39245afb064537ab24a1a954711f",
+    "closePrice": 13332000000,
+    "winner": 0,
+    "settleBlock": 10110715,
+    "settleTimestamp": 1784090332,
+    "settleTxHash": "5b848d47a4bff9be8b00ba306aa3ab7ad9787d38e233705fe807b78f28969156"
+  },
+  {
+    "marketId": 8,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "2a1926bcc2fad2a0791879fb7eb383fb017caf3d930b337c055453cd1d3651d9",
+        "blockNumber": 5310042,
+        "marketId": 8,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1783609400,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "2bd718f106d3ca0bdf7b2655fdd6eb9d4563ba5b89cefd12b29e403d7ae2ee5a",
+        "blockNumber": 10110765,
+        "marketId": 8,
+        "openPrice": 55712500000,
+        "timestamp": 1784090337,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "d6fa7e27470dd75d1aa8cf9751350ce91c783b0a2c06ba41949dbc6342e925e6",
+        "blockNumber": 10110817,
+        "marketId": 8,
+        "closePrice": 55712500000,
+        "winner": 0,
+        "timestamp": 1784090341,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "2a1926bcc2fad2a0791879fb7eb383fb017caf3d930b337c055453cd1d3651d9",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 86400,
+    "createBlock": 5310042,
+    "createTimestamp": 1783609400,
+    "openPrice": 55712500000,
+    "lockBlock": 10110765,
+    "lockTimestamp": 1784090337,
+    "lockTxHash": "2bd718f106d3ca0bdf7b2655fdd6eb9d4563ba5b89cefd12b29e403d7ae2ee5a",
+    "closePrice": 55712500000,
+    "winner": 0,
+    "settleBlock": 10110817,
+    "settleTimestamp": 1784090341,
+    "settleTxHash": "d6fa7e27470dd75d1aa8cf9751350ce91c783b0a2c06ba41949dbc6342e925e6"
+  },
+  {
+    "marketId": 9,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "8cd4e60d70ab2d8904f03b609a31202a79d0e6137b86d486219488d01e16c694",
+        "blockNumber": 5310073,
+        "marketId": 9,
+        "symbol": "NVDA",
+        "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "timestamp": 1783609403,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "c7b6178ae0214a9a48e12604452985a7250f2145dcc11f27c1f43d56785007d2",
+        "blockNumber": 10110854,
+        "marketId": 9,
+        "openPrice": 21221500000,
+        "timestamp": 1784090345,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "554dcd11540771746732f4b8d1bd5e2ffda7b2443dcdfd93eda2e049708bc779",
+        "blockNumber": 10110884,
+        "marketId": 9,
+        "closePrice": 21221500000,
+        "winner": 0,
+        "timestamp": 1784090348,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "NVDA",
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "createTxHash": "8cd4e60d70ab2d8904f03b609a31202a79d0e6137b86d486219488d01e16c694",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "duration": 86400,
+    "createBlock": 5310073,
+    "createTimestamp": 1783609403,
+    "openPrice": 21221500000,
+    "lockBlock": 10110854,
+    "lockTimestamp": 1784090345,
+    "lockTxHash": "c7b6178ae0214a9a48e12604452985a7250f2145dcc11f27c1f43d56785007d2",
+    "closePrice": 21221500000,
+    "winner": 0,
+    "settleBlock": 10110884,
+    "settleTimestamp": 1784090348,
+    "settleTxHash": "554dcd11540771746732f4b8d1bd5e2ffda7b2443dcdfd93eda2e049708bc779"
+  },
+  {
+    "marketId": 10,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "aebbfff660f64b8a43564fc3e93d9ff0c017efa04d62a130dc2c96ef4c7a43d8",
+        "blockNumber": 10111589,
+        "marketId": 10,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1784090419,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "4457b14131a5b5ac25832a93b123e0017e32cb31f9392d8f4501e0a72b5f3162",
+        "blockNumber": 12806363,
+        "marketId": 10,
+        "openPrice": 38146800000,
+        "timestamp": 1784360221,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "498e8527d7be5888778a9609a5e6500461cfeb7ce4cdf33d24b6a3de5c68dc6d",
+        "blockNumber": 12806393,
+        "marketId": 10,
+        "closePrice": 38146800000,
+        "winner": 0,
+        "timestamp": 1784360224,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "aebbfff660f64b8a43564fc3e93d9ff0c017efa04d62a130dc2c96ef4c7a43d8",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 86400,
+    "createBlock": 10111589,
+    "createTimestamp": 1784090419,
+    "openPrice": 38146800000,
+    "lockBlock": 12806363,
+    "lockTimestamp": 1784360221,
+    "lockTxHash": "4457b14131a5b5ac25832a93b123e0017e32cb31f9392d8f4501e0a72b5f3162",
+    "closePrice": 38146800000,
+    "winner": 0,
+    "settleBlock": 12806393,
+    "settleTimestamp": 1784360224,
+    "settleTxHash": "498e8527d7be5888778a9609a5e6500461cfeb7ce4cdf33d24b6a3de5c68dc6d"
+  },
+  {
+    "marketId": 11,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "e813c64b6700cb35a54215996a1f1d4ca983323a02fca69bba1edcc80bfa4072",
+        "blockNumber": 10111636,
+        "marketId": 11,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1784090424,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "89131cf99c2d893a8fb2dc45c4b2349a0e3531e25200fee8964d35ec6034384d",
+        "blockNumber": 12806434,
+        "marketId": 11,
+        "openPrice": 24700500000,
+        "timestamp": 1784360228,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "c369925980cb3193f7ab6203a6b6d2be14c98b46848af52fa2a1de531d387186",
+        "blockNumber": 12806467,
+        "marketId": 11,
+        "closePrice": 24700500000,
+        "winner": 0,
+        "timestamp": 1784360231,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "e813c64b6700cb35a54215996a1f1d4ca983323a02fca69bba1edcc80bfa4072",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 86400,
+    "createBlock": 10111636,
+    "createTimestamp": 1784090424,
+    "openPrice": 24700500000,
+    "lockBlock": 12806434,
+    "lockTimestamp": 1784360228,
+    "lockTxHash": "89131cf99c2d893a8fb2dc45c4b2349a0e3531e25200fee8964d35ec6034384d",
+    "closePrice": 24700500000,
+    "winner": 0,
+    "settleBlock": 12806467,
+    "settleTimestamp": 1784360231,
+    "settleTxHash": "c369925980cb3193f7ab6203a6b6d2be14c98b46848af52fa2a1de531d387186"
+  },
+  {
+    "marketId": 12,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "63b8384bc3e313bb437b34b6a6dba42a6e1879b33ae21c528e18037974d7662a",
+        "blockNumber": 10111682,
+        "marketId": 12,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1784090428,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "c189344f599138d364728cf57b9621d77ffea4e1ffb740ad011baa75f5c54758",
+        "blockNumber": 12806525,
+        "marketId": 12,
+        "openPrice": 13169235000,
+        "timestamp": 1784360237,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "87f9cbe9cb8590dc3ca372aae8a8a59581f9e87620dac90d6de9d845444ecc83",
+        "blockNumber": 12806558,
+        "marketId": 12,
+        "closePrice": 13169235000,
+        "winner": 0,
+        "timestamp": 1784360240,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "63b8384bc3e313bb437b34b6a6dba42a6e1879b33ae21c528e18037974d7662a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 86400,
+    "createBlock": 10111682,
+    "createTimestamp": 1784090428,
+    "openPrice": 13169235000,
+    "lockBlock": 12806525,
+    "lockTimestamp": 1784360237,
+    "lockTxHash": "c189344f599138d364728cf57b9621d77ffea4e1ffb740ad011baa75f5c54758",
+    "closePrice": 13169235000,
+    "winner": 0,
+    "settleBlock": 12806558,
+    "settleTimestamp": 1784360240,
+    "settleTxHash": "87f9cbe9cb8590dc3ca372aae8a8a59581f9e87620dac90d6de9d845444ecc83"
+  },
+  {
+    "marketId": 13,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "6c2d5644f079c3e320556b2550c52641c9c6802620cf6b72724125d3b8b3a4d7",
+        "blockNumber": 10111715,
+        "marketId": 13,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1784090431,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "788fd5f5ea7fb5305e280b42b952bb9714b817630fc8edc075f494a3b1f20766",
+        "blockNumber": 12806597,
+        "marketId": 13,
+        "openPrice": 49389930000,
+        "timestamp": 1784360244,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "dbed7cc0d9d4b3633f1f2d67cc0ade952136cf6886b127f84846793200aea716",
+        "blockNumber": 12806645,
+        "marketId": 13,
+        "closePrice": 49389930000,
+        "winner": 0,
+        "timestamp": 1784360249,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "6c2d5644f079c3e320556b2550c52641c9c6802620cf6b72724125d3b8b3a4d7",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 86400,
+    "createBlock": 10111715,
+    "createTimestamp": 1784090431,
+    "openPrice": 49389930000,
+    "lockBlock": 12806597,
+    "lockTimestamp": 1784360244,
+    "lockTxHash": "788fd5f5ea7fb5305e280b42b952bb9714b817630fc8edc075f494a3b1f20766",
+    "closePrice": 49389930000,
+    "winner": 0,
+    "settleBlock": 12806645,
+    "settleTimestamp": 1784360249,
+    "settleTxHash": "dbed7cc0d9d4b3633f1f2d67cc0ade952136cf6886b127f84846793200aea716"
+  },
+  {
+    "marketId": 14,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "75abc2134abb0c4a5f3411bd97fb12a87d75884923c04b4ae3316c23c8fc353c",
+        "blockNumber": 10111761,
+        "marketId": 14,
+        "symbol": "NVDA",
+        "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "timestamp": 1784090436,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "BetPlaced",
+        "txHash": "ca6eee6f531fa6d7d8ade5ca703c9f659985e0cd7b7241eb01512c6ce797809f",
+        "blockNumber": 10115642,
+        "marketId": 14,
+        "user": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9",
+        "direction": 0,
+        "amount": 1000000000000000,
+        "timestamp": 1784090825,
+        "from": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "5f22d4ea78e9d911a3e4b2c6e458c17f043c3a55bcb1b5b53bc92ecc52efd113",
+        "blockNumber": 12806680,
+        "marketId": 14,
+        "openPrice": 20279625000,
+        "timestamp": 1784360253,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "e293e866ff7dc62a9dd3550936c1d4f4b4156b2f9527551b1cb223051c3a5924",
+        "blockNumber": 12806713,
+        "marketId": 14,
+        "closePrice": 20279625000,
+        "winner": 0,
+        "timestamp": 1784360256,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "NVDA",
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "createTxHash": "75abc2134abb0c4a5f3411bd97fb12a87d75884923c04b4ae3316c23c8fc353c",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "duration": 86400,
+    "createBlock": 10111761,
+    "createTimestamp": 1784090436,
+    "bets": [
+      {
+        "user": "0x52905A5E83A83F6a9d0e64Ad24e79a37512D35B9",
+        "direction": 0,
+        "amount": 1000000000000000,
+        "txHash": "ca6eee6f531fa6d7d8ade5ca703c9f659985e0cd7b7241eb01512c6ce797809f"
+      }
+    ],
+    "openPrice": 20279625000,
+    "lockBlock": 12806680,
+    "lockTimestamp": 1784360253,
+    "lockTxHash": "5f22d4ea78e9d911a3e4b2c6e458c17f043c3a55bcb1b5b53bc92ecc52efd113",
+    "closePrice": 20279625000,
+    "winner": 0,
+    "settleBlock": 12806713,
+    "settleTimestamp": 1784360256,
+    "settleTxHash": "e293e866ff7dc62a9dd3550936c1d4f4b4156b2f9527551b1cb223051c3a5924"
+  },
+  {
+    "marketId": 15,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "13568c37389e2a29a67abbe8ff0f294f581230d384e358559ffb23923ed0af3f",
+        "blockNumber": 12811257,
+        "marketId": 15,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1784360711,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "4be6e07478e431c6eb3a06b3c04aff567729263197c0401d1f54b12d8f3547fa",
+        "blockNumber": 20378929,
+        "marketId": 15,
+        "openPrice": 31427500000,
+        "timestamp": 1785119852,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "1edd2f4407f26ecb49269a98d595cf559dff0fa307e207d6c11edcfa17c0ea2e",
+        "blockNumber": 20419211,
+        "marketId": 15,
+        "closePrice": 31427500000,
+        "winner": 0,
+        "timestamp": 1785123897,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "13568c37389e2a29a67abbe8ff0f294f581230d384e358559ffb23923ed0af3f",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 604800,
+    "createBlock": 12811257,
+    "createTimestamp": 1784360711,
+    "openPrice": 31427500000,
+    "lockBlock": 20378929,
+    "lockTimestamp": 1785119852,
+    "lockTxHash": "4be6e07478e431c6eb3a06b3c04aff567729263197c0401d1f54b12d8f3547fa",
+    "closePrice": 31427500000,
+    "winner": 0,
+    "settleBlock": 20419211,
+    "settleTimestamp": 1785123897,
+    "settleTxHash": "1edd2f4407f26ecb49269a98d595cf559dff0fa307e207d6c11edcfa17c0ea2e"
+  },
+  {
+    "marketId": 16,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "fe40ae635a37bf145b5fbb01009e26713de3230b7ad70be6e1a3e08a924e371a",
+        "blockNumber": 12811291,
+        "marketId": 16,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1784360715,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "c0453436335c522000c151de15d5144b5fcb45ede64b89d66af58dd23abdee91",
+        "blockNumber": 20378979,
+        "marketId": 16,
+        "openPrice": 23513000000,
+        "timestamp": 1785119857,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "ace3dd540f3d69d86b04e25f1148326e72f52d3066b24c4d8bd315affcca270b",
+        "blockNumber": 20419260,
+        "marketId": 16,
+        "closePrice": 23513000000,
+        "winner": 0,
+        "timestamp": 1785123901,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "fe40ae635a37bf145b5fbb01009e26713de3230b7ad70be6e1a3e08a924e371a",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 604800,
+    "createBlock": 12811291,
+    "createTimestamp": 1784360715,
+    "openPrice": 23513000000,
+    "lockBlock": 20378979,
+    "lockTimestamp": 1785119857,
+    "lockTxHash": "c0453436335c522000c151de15d5144b5fcb45ede64b89d66af58dd23abdee91",
+    "closePrice": 23513000000,
+    "winner": 0,
+    "settleBlock": 20419260,
+    "settleTimestamp": 1785123901,
+    "settleTxHash": "ace3dd540f3d69d86b04e25f1148326e72f52d3066b24c4d8bd315affcca270b"
+  },
+  {
+    "marketId": 17,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "72bf79df9c7128901fd7e5712fb74cadeebf1a5f735186963a916154c816248a",
+        "blockNumber": 12811336,
+        "marketId": 17,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1784360719,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "7ab7de3c7ee0455d90600500ee14217ad54ddfdfa723e659fa87e2915ef75b75",
+        "blockNumber": 20379030,
+        "marketId": 17,
+        "openPrice": 12368000000,
+        "timestamp": 1785119862,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "38b58a671f6612124f00dbced6c236045359be0b1568ad5af518690b90d473be",
+        "blockNumber": 20419301,
+        "marketId": 17,
+        "closePrice": 12368000000,
+        "winner": 0,
+        "timestamp": 1785123906,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "72bf79df9c7128901fd7e5712fb74cadeebf1a5f735186963a916154c816248a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 604800,
+    "createBlock": 12811336,
+    "createTimestamp": 1784360719,
+    "openPrice": 12368000000,
+    "lockBlock": 20379030,
+    "lockTimestamp": 1785119862,
+    "lockTxHash": "7ab7de3c7ee0455d90600500ee14217ad54ddfdfa723e659fa87e2915ef75b75",
+    "closePrice": 12368000000,
+    "winner": 0,
+    "settleBlock": 20419301,
+    "settleTimestamp": 1785123906,
+    "settleTxHash": "38b58a671f6612124f00dbced6c236045359be0b1568ad5af518690b90d473be"
+  },
+  {
+    "marketId": 18,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "02cdb82c978c8173a487cc40e2cd47e63a728027a1389a8b128ff196f7ae6230",
+        "blockNumber": 12811388,
+        "marketId": 18,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1784360725,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "a94740bfe85241521ea1c86d230ff649dd3ff89f0b058c9036691a45a371b3e4",
+        "blockNumber": 20379080,
+        "marketId": 18,
+        "openPrice": 53250000000,
+        "timestamp": 1785119867,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "73a546fda0e53583a01f509c5499807d6c22952d9d89bc0c47ccbf2a8b476f9d",
+        "blockNumber": 20419354,
+        "marketId": 18,
+        "closePrice": 53250000000,
+        "winner": 0,
+        "timestamp": 1785123911,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "02cdb82c978c8173a487cc40e2cd47e63a728027a1389a8b128ff196f7ae6230",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 604800,
+    "createBlock": 12811388,
+    "createTimestamp": 1784360725,
+    "openPrice": 53250000000,
+    "lockBlock": 20379080,
+    "lockTimestamp": 1785119867,
+    "lockTxHash": "a94740bfe85241521ea1c86d230ff649dd3ff89f0b058c9036691a45a371b3e4",
+    "closePrice": 53250000000,
+    "winner": 0,
+    "settleBlock": 20419354,
+    "settleTimestamp": 1785123911,
+    "settleTxHash": "73a546fda0e53583a01f509c5499807d6c22952d9d89bc0c47ccbf2a8b476f9d"
+  },
+  {
+    "marketId": 19,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "e3ae92765f15c22ecc119f6835241b9807781b9a2d101a0f88efdee6e3bcc144",
+        "blockNumber": 12811435,
+        "marketId": 19,
+        "symbol": "NVDA",
+        "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "timestamp": 1784360729,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "20c6ced4da3376ce4038a54cd887a9f557ba16b82d75f46965da61ad1de19361",
+        "blockNumber": 20379129,
+        "marketId": 19,
+        "openPrice": 20886500000,
+        "timestamp": 1785119872,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "bd8061543772cfe361c570676500446a43cc670554ffb253f31117777acdfc21",
+        "blockNumber": 20419390,
+        "marketId": 19,
+        "closePrice": 20886500000,
+        "winner": 0,
+        "timestamp": 1785123915,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "NVDA",
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "createTxHash": "e3ae92765f15c22ecc119f6835241b9807781b9a2d101a0f88efdee6e3bcc144",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "duration": 604800,
+    "createBlock": 12811435,
+    "createTimestamp": 1784360729,
+    "openPrice": 20886500000,
+    "lockBlock": 20379129,
+    "lockTimestamp": 1785119872,
+    "lockTxHash": "20c6ced4da3376ce4038a54cd887a9f557ba16b82d75f46965da61ad1de19361",
+    "closePrice": 20886500000,
+    "winner": 0,
+    "settleBlock": 20419390,
+    "settleTimestamp": 1785123915,
+    "settleTxHash": "bd8061543772cfe361c570676500446a43cc670554ffb253f31117777acdfc21"
+  },
+  {
+    "marketId": 20,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "77215c09cdcc21dacf0bdbd3e691817d0f5490c8f9ae8dd98e44ff1d8590ee86",
+        "blockNumber": 20421310,
+        "marketId": 20,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1785124107,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "2afade2634b96700941f60df325ecf2d6e5654cf0163d022db7f3de7af7a02ac",
+        "blockNumber": 31556978,
+        "marketId": 20,
+        "openPrice": 32854999999,
+        "timestamp": 1786240522,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "aa209272fb6bc934ad7c0e78928c2ccc7f7e87c0cff72d9068c968b5c22cc5ed",
+        "blockNumber": 31557020,
+        "marketId": 20,
+        "closePrice": 32854999999,
+        "winner": 0,
+        "timestamp": 1786240527,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "77215c09cdcc21dacf0bdbd3e691817d0f5490c8f9ae8dd98e44ff1d8590ee86",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 604800,
+    "createBlock": 20421310,
+    "createTimestamp": 1785124107,
+    "openPrice": 32854999999,
+    "lockBlock": 31556978,
+    "lockTimestamp": 1786240522,
+    "lockTxHash": "2afade2634b96700941f60df325ecf2d6e5654cf0163d022db7f3de7af7a02ac",
+    "closePrice": 32854999999,
+    "winner": 0,
+    "settleBlock": 31557020,
+    "settleTimestamp": 1786240527,
+    "settleTxHash": "aa209272fb6bc934ad7c0e78928c2ccc7f7e87c0cff72d9068c968b5c22cc5ed"
+  },
+  {
+    "marketId": 21,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "326a9eec927d807fdedbf5b4eee08c6ab7719e8f6e5971338e9c5d6ba668540c",
+        "blockNumber": 20421358,
+        "marketId": 21,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1785124112,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "07eeb46c20f63211e731d4a4e0451f3082ee052da796bdda0b7a8c40789fa5a3",
+        "blockNumber": 31557056,
+        "marketId": 21,
+        "openPrice": 27512280000,
+        "timestamp": 1786240530,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "2d044eb9ae14285f0a7392a30c81489cafdd83f204baef1be1a7add04f96852b",
+        "blockNumber": 31557099,
+        "marketId": 21,
+        "closePrice": 27512280000,
+        "winner": 0,
+        "timestamp": 1786240535,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "326a9eec927d807fdedbf5b4eee08c6ab7719e8f6e5971338e9c5d6ba668540c",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 604800,
+    "createBlock": 20421358,
+    "createTimestamp": 1785124112,
+    "openPrice": 27512280000,
+    "lockBlock": 31557056,
+    "lockTimestamp": 1786240530,
+    "lockTxHash": "07eeb46c20f63211e731d4a4e0451f3082ee052da796bdda0b7a8c40789fa5a3",
+    "closePrice": 27512280000,
+    "winner": 0,
+    "settleBlock": 31557099,
+    "settleTimestamp": 1786240535,
+    "settleTxHash": "2d044eb9ae14285f0a7392a30c81489cafdd83f204baef1be1a7add04f96852b"
+  },
+  {
+    "marketId": 22,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "fe64c2791667f33febce0c7163032f7d7aabbbf0609ed417cfcb3da3d6fe31b8",
+        "blockNumber": 20421393,
+        "marketId": 22,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1785124115,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "933af138fd96156474f79d61075d5d72ba6f00e8a0c4d7f79be577eeb3c3cdd6",
+        "blockNumber": 31557138,
+        "marketId": 22,
+        "openPrice": 17165500000,
+        "timestamp": 1786240539,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "3b7e8a5e79878593908245e79361265be6bffb5d15b1b29e2590b56d62fde2ac",
+        "blockNumber": 31557190,
+        "marketId": 22,
+        "closePrice": 17165500000,
+        "winner": 0,
+        "timestamp": 1786240544,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "fe64c2791667f33febce0c7163032f7d7aabbbf0609ed417cfcb3da3d6fe31b8",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 604800,
+    "createBlock": 20421393,
+    "createTimestamp": 1785124115,
+    "openPrice": 17165500000,
+    "lockBlock": 31557138,
+    "lockTimestamp": 1786240539,
+    "lockTxHash": "933af138fd96156474f79d61075d5d72ba6f00e8a0c4d7f79be577eeb3c3cdd6",
+    "closePrice": 17165500000,
+    "winner": 0,
+    "settleBlock": 31557190,
+    "settleTimestamp": 1786240544,
+    "settleTxHash": "3b7e8a5e79878593908245e79361265be6bffb5d15b1b29e2590b56d62fde2ac"
+  },
+  {
+    "marketId": 23,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "4449204c63ae8e8bd206b11fb6dc72a8b930aaa4a5208c53287620c16d24781e",
+        "blockNumber": 20421430,
+        "marketId": 23,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1785124119,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "053c19c5352d006f1701b00d31d9289619eca1b2c38f617671fefb96c886cc64",
+        "blockNumber": 31557228,
+        "marketId": 23,
+        "openPrice": 48240999999,
+        "timestamp": 1786240548,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "50c36385a69695de9b8814dd29b5ab0ce9c2019123059102d05669799b37dbce",
+        "blockNumber": 31557270,
+        "marketId": 23,
+        "closePrice": 48240999999,
+        "winner": 0,
+        "timestamp": 1786240552,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "4449204c63ae8e8bd206b11fb6dc72a8b930aaa4a5208c53287620c16d24781e",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 604800,
+    "createBlock": 20421430,
+    "createTimestamp": 1785124119,
+    "openPrice": 48240999999,
+    "lockBlock": 31557228,
+    "lockTimestamp": 1786240548,
+    "lockTxHash": "053c19c5352d006f1701b00d31d9289619eca1b2c38f617671fefb96c886cc64",
+    "closePrice": 48240999999,
+    "winner": 0,
+    "settleBlock": 31557270,
+    "settleTimestamp": 1786240552,
+    "settleTxHash": "50c36385a69695de9b8814dd29b5ab0ce9c2019123059102d05669799b37dbce"
+  },
+  {
+    "marketId": 24,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "8326c5b9fd94b8e5098a59b7b3acdd62573169e16bbc9b4ab7a2076f3244ce67",
+        "blockNumber": 20421464,
+        "marketId": 24,
+        "symbol": "NVDA",
+        "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+        "timestamp": 1785124122,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "54445e223ef8d2a0ca54a621591fa487caf60fbe3c6d4ae276636379fac0c9f9",
+        "blockNumber": 31557306,
+        "marketId": 24,
+        "openPrice": 22370500000,
+        "timestamp": 1786240555,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "a59b7db9dd64c17a21e9a4e6cf78c0dc43e5ae08aba8b18e63c0a9e65652a291",
+        "blockNumber": 31557336,
+        "marketId": 24,
+        "closePrice": 22370500000,
+        "winner": 0,
+        "timestamp": 1786240558,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "NVDA",
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "createTxHash": "8326c5b9fd94b8e5098a59b7b3acdd62573169e16bbc9b4ab7a2076f3244ce67",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "duration": 604800,
+    "createBlock": 20421464,
+    "createTimestamp": 1785124122,
+    "openPrice": 22370500000,
+    "lockBlock": 31557306,
+    "lockTimestamp": 1786240555,
+    "lockTxHash": "54445e223ef8d2a0ca54a621591fa487caf60fbe3c6d4ae276636379fac0c9f9",
+    "closePrice": 22370500000,
+    "winner": 0,
+    "settleBlock": 31557336,
+    "settleTimestamp": 1786240558,
+    "settleTxHash": "a59b7db9dd64c17a21e9a4e6cf78c0dc43e5ae08aba8b18e63c0a9e65652a291"
+  },
+  {
+    "marketId": 25,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "52997bc30ef203d4c12cadffe58b09814eddf3a7b5602d052ffa192f21a29694",
+        "blockNumber": 31557487,
+        "marketId": 25,
+        "symbol": "PLTR",
+        "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+        "timestamp": 1786240574,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "e475b70867537a670c2ed15f1c40b4f9dbdda2074a6b58c10d3d22d060caa01f",
+        "blockNumber": 45807749,
+        "marketId": 25,
+        "openPrice": 17445465000,
+        "timestamp": 1787668882,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "a6edfe9a0c111554c8c10bcba930e5e74304a886c686f9ddd81e30412005dd9d",
+        "blockNumber": 45807783,
+        "marketId": 25,
+        "closePrice": 17445465000,
+        "winner": 0,
+        "timestamp": 1787668886,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "PLTR",
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "createTxHash": "52997bc30ef203d4c12cadffe58b09814eddf3a7b5602d052ffa192f21a29694",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "duration": 1209600,
+    "createBlock": 31557487,
+    "createTimestamp": 1786240574,
+    "openPrice": 17445465000,
+    "lockBlock": 45807749,
+    "lockTimestamp": 1787668882,
+    "lockTxHash": "e475b70867537a670c2ed15f1c40b4f9dbdda2074a6b58c10d3d22d060caa01f",
+    "closePrice": 17445465000,
+    "winner": 0,
+    "settleBlock": 45807783,
+    "settleTimestamp": 1787668886,
+    "settleTxHash": "a6edfe9a0c111554c8c10bcba930e5e74304a886c686f9ddd81e30412005dd9d"
+  },
+  {
+    "marketId": 26,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "bc51d452add7dfee604b00dbccb3af867b79679ebc9ffcb709082b8d3bd823b3",
+        "blockNumber": 31557520,
+        "marketId": 26,
+        "symbol": "AMD",
+        "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+        "timestamp": 1786240577,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketLocked",
+        "txHash": "0fabe5e8087f628cd2efd675c862b716ee3a301cee4944630a3997f5c445fda6",
+        "blockNumber": 45807834,
+        "marketId": 26,
+        "openPrice": 47604500000,
+        "timestamp": 1787668891,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      },
+      {
+        "event": "MarketSettled",
+        "txHash": "773acafe17853c195854df8b3fbf7b4af70c0def740c97ac3c8d5d13c581986f",
+        "blockNumber": 45807949,
+        "marketId": 26,
+        "closePrice": 47604500000,
+        "winner": 0,
+        "timestamp": 1787668902,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMD",
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "createTxHash": "bc51d452add7dfee604b00dbccb3af867b79679ebc9ffcb709082b8d3bd823b3",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "duration": 1209600,
+    "createBlock": 31557520,
+    "createTimestamp": 1786240577,
+    "openPrice": 47604500000,
+    "lockBlock": 45807834,
+    "lockTimestamp": 1787668891,
+    "lockTxHash": "0fabe5e8087f628cd2efd675c862b716ee3a301cee4944630a3997f5c445fda6",
+    "closePrice": 47604500000,
+    "winner": 0,
+    "settleBlock": 45807949,
+    "settleTimestamp": 1787668902,
+    "settleTxHash": "773acafe17853c195854df8b3fbf7b4af70c0def740c97ac3c8d5d13c581986f"
+  },
+  {
+    "marketId": 27,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "68c6e417c0b8d20b0c5bda54bf0a86baa5f49b70a2161767781d3f5de5a2bcc3",
+        "blockNumber": 45812761,
+        "marketId": 27,
+        "symbol": "TSLA",
+        "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+        "timestamp": 1787669386,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "TSLA",
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "createTxHash": "68c6e417c0b8d20b0c5bda54bf0a86baa5f49b70a2161767781d3f5de5a2bcc3",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "duration": 1209600,
+    "createBlock": 45812761,
+    "createTimestamp": 1787669386
+  },
+  {
+    "marketId": 28,
+    "events": [
+      {
+        "event": "MarketCreated",
+        "txHash": "e6bf8b5f09c99e44e04f1897765ac29fe8685b280cee7d1fd5f43f96af0a5399",
+        "blockNumber": 45812800,
+        "marketId": 28,
+        "symbol": "AMZN",
+        "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+        "timestamp": 1787669390,
+        "from": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+      }
+    ],
+    "symbol": "AMZN",
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "createTxHash": "e6bf8b5f09c99e44e04f1897765ac29fe8685b280cee7d1fd5f43f96af0a5399",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "duration": 1209600,
+    "createBlock": 45812800,
+    "createTimestamp": 1787669390
+  }
+]

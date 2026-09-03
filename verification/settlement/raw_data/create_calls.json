@@ -1,0 +1,176 @@
+{
+  "02cdb82c978c8173a487cc40e2cd47e63a728027a1389a8b128ff196f7ae6230": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 604800
+  },
+  "0f9ddda7e9dd873cf0601557af7c2a3facbef13a9f885452fb02dd41f5884ba2": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 3600
+  },
+  "13568c37389e2a29a67abbe8ff0f294f581230d384e358559ffb23923ed0af3f": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 604800
+  },
+  "2173b62845437d6a3bbda163563c289c53a12c3c12b3fac344d2266743dfe6fb": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 3600
+  },
+  "2a1926bcc2fad2a0791879fb7eb383fb017caf3d930b337c055453cd1d3651d9": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 86400
+  },
+  "326a9eec927d807fdedbf5b4eee08c6ab7719e8f6e5971338e9c5d6ba668540c": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 604800
+  },
+  "39d64614da995e64ccd001fb5bbb10177135a1806fd9eda906f95437452a0ab8": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 86400
+  },
+  "4449204c63ae8e8bd206b11fb6dc72a8b930aaa4a5208c53287620c16d24781e": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 604800
+  },
+  "52997bc30ef203d4c12cadffe58b09814eddf3a7b5602d052ffa192f21a29694": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 1209600
+  },
+  "63b8384bc3e313bb437b34b6a6dba42a6e1879b33ae21c528e18037974d7662a": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 86400
+  },
+  "68c6e417c0b8d20b0c5bda54bf0a86baa5f49b70a2161767781d3f5de5a2bcc3": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 1209600
+  },
+  "6c2d5644f079c3e320556b2550c52641c9c6802620cf6b72724125d3b8b3a4d7": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 86400
+  },
+  "714be8b37c7fc77ffebb80a8c819c0a2e22af38b884b7c9c017809999aa243e4": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 86400
+  },
+  "72bf79df9c7128901fd7e5712fb74cadeebf1a5f735186963a916154c816248a": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 604800
+  },
+  "75abc2134abb0c4a5f3411bd97fb12a87d75884923c04b4ae3316c23c8fc353c": {
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "symbol": "NVDA",
+    "duration": 86400
+  },
+  "77215c09cdcc21dacf0bdbd3e691817d0f5490c8f9ae8dd98e44ff1d8590ee86": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 604800
+  },
+  "8326c5b9fd94b8e5098a59b7b3acdd62573169e16bbc9b4ab7a2076f3244ce67": {
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "symbol": "NVDA",
+    "duration": 604800
+  },
+  "8409902543d540966213bf58387f009c7b8e8aeec63b01cdeb478ccbea69e222": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 86400
+  },
+  "8cd4e60d70ab2d8904f03b609a31202a79d0e6137b86d486219488d01e16c694": {
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "symbol": "NVDA",
+    "duration": 86400
+  },
+  "8ee1ced8e32a142068261c9a15172f6f069567648956e50fbbd0ccd0454eb6e1": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 3600
+  },
+  "9c8c9f9f509e59a5a01f8028b1d1afd25b3e917f94abb9b0dc377baebf5bab5e": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 3600
+  },
+  "aebbfff660f64b8a43564fc3e93d9ff0c017efa04d62a130dc2c96ef4c7a43d8": {
+    "stockToken": "0x322f0929c4625ed5bad873c95208d54e1c003b2d",
+    "priceFeed": "0x072a3a0c04cf8cdcaf5b4a73a4ed4ff5a841531f",
+    "symbol": "TSLA",
+    "duration": 86400
+  },
+  "bc51d452add7dfee604b00dbccb3af867b79679ebc9ffcb709082b8d3bd823b3": {
+    "stockToken": "0x86923f96303d656e4aa86d9d42d1e57ad2023fdc",
+    "priceFeed": "0x15636ce4c0ede55335f84e6386f8f49c897c077d",
+    "symbol": "AMD",
+    "duration": 1209600
+  },
+  "c7745300eff6d293ef59cf3000b988437afead7265d275f3bbf314d7f234e384": {
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "symbol": "NVDA",
+    "duration": 3600
+  },
+  "e3ae92765f15c22ecc119f6835241b9807781b9a2d101a0f88efdee6e3bcc144": {
+    "stockToken": "0xd0601ce157db5bdc3162bbac2a2c8af5320d9eec",
+    "priceFeed": "0x914c40a644493b47336de847b0404e729e06c68d",
+    "symbol": "NVDA",
+    "duration": 604800
+  },
+  "e6bf8b5f09c99e44e04f1897765ac29fe8685b280cee7d1fd5f43f96af0a5399": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 1209600
+  },
+  "e813c64b6700cb35a54215996a1f1d4ca983323a02fca69bba1edcc80bfa4072": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 86400
+  },
+  "fe40ae635a37bf145b5fbb01009e26713de3230b7ad70be6e1a3e08a924e371a": {
+    "stockToken": "0x12f190a9f9d7d37a250758b26824b97ce941bf54",
+    "priceFeed": "0xcac5b9d2817325e78090e3ce4b9c299c819cf953",
+    "symbol": "AMZN",
+    "duration": 604800
+  },
+  "fe64c2791667f33febce0c7163032f7d7aabbbf0609ed417cfcb3da3d6fe31b8": {
+    "stockToken": "0x894e1ec2d74ffe5aef8dc8a9e84686accb964f2a",
+    "priceFeed": "0xbdc53e50b1167ce1199bfad54a034f7ab1741051",
+    "symbol": "PLTR",
+    "duration": 604800
+  }
+}
