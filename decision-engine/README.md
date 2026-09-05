@@ -30,11 +30,18 @@ Full factor/threshold definitions and the momentum-vs-mean-reversion disclosure 
 
 ```bash
 npm install
-npm test                    # deterministic unit tests, Steps 1+2 only
-node scripts/run-demo.mjs   # full pipeline over the real 89-row PriceRangeIndex history,
-                             # including live relayer attestation calls; prints one real
-                             # BULL / BEAR / NO_TRADE example
+npm test        # deterministic unit tests, Steps 1+2 only
+npm run demo    # full pipeline over the real 89-row PriceRangeIndex history, including live
+                 # relayer attestation calls; prints one real BULL / BEAR / NO_TRADE example
 ```
+
+`npm run demo` loads `.env` (via `node --env-file`), so `AGENT_PRIVATE_KEY` there is used as this
+engine's fixed identity across runs. **Without a `.env`, `run-demo.mjs` generates a new random
+key every single invocation** — fine for exercising the pipeline, but useless for registering a
+real AgentBook identity, since a registration is permanently bound to one specific address and
+there would be no way to recover that address's key on a later run. Once you intend to register
+a real identity for this engine, generate a key once, save it to `.env`, and never regenerate it
+— see `.env.example`.
 
 ## Reference model
 

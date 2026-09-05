@@ -6,7 +6,8 @@
   "main": "src/decision-engine.js",
   "private": true,
   "scripts": {
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "demo": "node --env-file=.env scripts/run-demo.mjs"
   },
   "dependencies": {
     "@worldcoin/agentkit-core": "0.2.1",
