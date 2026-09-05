@@ -1,5 +1,7 @@
 # Architectural Directive: Indexing Infrastructure Choice
 
+**Decision Date:** 2026-09-05
+
 ## Decision Context (Human Architect)
 
 Direction One requires an indexing layer capable of querying historical

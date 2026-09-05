@@ -1,5 +1,7 @@
 # Architectural Directive: Calibrated Autonomy Boundary
 
+**Decision Date:** 2026-09-03
+
 ## Decision Context (Human Architect)
 
 AI agents operating in on-chain financial contexts tend to fail in one of

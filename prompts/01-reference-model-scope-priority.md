@@ -1,5 +1,7 @@
 # Architectural Directive: Reference Model Scope Priority
 
+**Decision Date:** 2026-09-03
+
 ## Decision Context (Human Architect)
 
 Direction Three (the full scope of the Graph computation layer, Direction

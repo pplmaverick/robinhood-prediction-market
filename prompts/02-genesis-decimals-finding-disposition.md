@@ -1,5 +1,7 @@
 # Architectural Directive: Genesis Decimals Finding Disposition
 
+**Decision Date:** 2026-09-03
+
 ## Decision Context (Human Architect)
 
 Independent Reference Model Testing of `settleMarket()`/`claimWinnings()`

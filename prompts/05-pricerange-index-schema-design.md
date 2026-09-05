@@ -1,5 +1,7 @@
 # Architectural Directive: PriceRangeIndex Schema Design
 
+**Decision Date:** 2026-09-05
+
 ## Decision Context (Human Architect)
 
 The rolling-window computation layer (`PriceRangeIndex`) needs to
