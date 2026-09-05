@@ -1,0 +1,21 @@
+type AnswerUpdated @entity(immutable: true) {
+  id: Bytes!
+  feedAddress: Bytes! # which of the 5 raw aggregators emitted this
+  current: BigInt! # int256
+  roundId: BigInt! # uint256
+  updatedAt: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}
+
+type NewRound @entity(immutable: true) {
+  id: Bytes!
+  feedAddress: Bytes! # which of the 5 raw aggregators emitted this
+  roundId: BigInt! # uint256
+  startedBy: Bytes! # address
+  startedAt: BigInt! # uint256
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

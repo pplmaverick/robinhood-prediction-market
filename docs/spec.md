@@ -96,6 +96,34 @@ windows; apply retry/backoff to both `-32000` (timeout) and `429`
 succeed. Apply this wherever a subgraph indexing script or the relayer
 uses `eth_getLogs` against this RPC endpoint.
 
+## Indexing infrastructure: two paths validated in parallel (2026-09-05)
+
+Before committing to an indexing approach for the rolling-window
+computation layer, both available paths were spiked concurrently rather
+than picking one and hoping it works:
+
+- **The Graph's official decentralized network (Subgraph Studio)**:
+  confirmed via `thegraph.com/docs/en/supported-networks/robinhood/` that
+  Robinhood Chain is an officially supported network, corroborated by
+  three independent third-party indexers (Goldsky, Ormi, Envio) that each
+  separately advertise Robinhood Chain support. Not yet deployed
+  end-to-end — creating a Studio project requires a wallet-authenticated
+  browser session, which is a manual step still pending.
+- **Self-hosted `graph-node`** (Hetzner VPS, Docker: `graph-node` +
+  Postgres + IPFS, `ethereum: robinhood:https://rpc.mainnet.chain.robinhood.com`):
+  fully deployed and verified. A subgraph indexing all 5 raw Chainlink
+  aggregators (`AnswerUpdated`/`NewRound` events) synced successfully and
+  returned real on-chain data distinguishable per feed via a `feedAddress`
+  field — TSLA 22, AMZN 9, PLTR 19, AMD 26, NVDA 13 `AnswerUpdated` events
+  indexed over a ~500K-block window, prices matching the expected range
+  for each symbol. This is the currently-running foundation for the
+  rolling-window computation layer (`subgraph/` in this repo).
+
+Both paths are viable; the self-hosted path is what active development
+builds on for now, with Studio deployment to follow once the manual
+account-creation step is done — this is not a single-path bet made without
+checking the alternative first.
+
 ## Handling approach
 
 - Computation layer performs a sanity check on each round's decimals value
