@@ -135,3 +135,77 @@ checking the alternative first.
   (`verification/settlement/`) — the same per-feed cutoffs, not a
   simplified version — or Graph computation results and Reference Model
   recomputation will diverge, creating a new inconsistency.
+
+## PriceRangeIndex — rolling-window computation layer (Direction 1)
+
+Schema design approved 2026-09-05 (`subgraph/schema.graphql`). Three
+statistics are computed per feed on every `AnswerUpdated` event, over a
+rolling window of the last N=20 normalized prices: moving average,
+volatility, and percentile rank. All three are computed unconditionally
+from whatever window size is actually available — the handler does not
+wait for 20 samples to accumulate before producing output, and does not
+pad a short window with placeholder values.
+
+### Entity responsibility split
+
+Two entities, not one, because "incremental state" and "per-event
+historical record" are different jobs that a single entity can't do at
+once:
+
+- **`FeedWindow`** (mutable, one row per feed, `id = feedAddress`): pure
+  internal bookkeeping. Holds the rolling `prices` array (max 20 entries,
+  oldest first). Loaded and overwritten in place on every `AnswerUpdated`
+  event. The mapping handler never re-scans historical events to rebuild
+  this array — the array itself *is* the state, which is what makes the
+  update incremental rather than a full historical recomputation.
+- **`PriceRangeIndex`** (immutable, one row per `AnswerUpdated` event): the
+  output. A snapshot of mean/volatility/percentile computed immediately
+  after that event's price is pushed into the window, plus
+  `actualWindowSize` and `isFullWindow` recording exactly how many samples
+  that computation was based on. This is the entity compared row-by-row
+  against the Python reference model.
+
+### percentileRank definition
+
+```
+percentileRank = (count of window values <= currentPrice) / actualWindowSize * 100
+```
+
+computed *after* the triggering event's price has been pushed into the
+window, so the window used for ranking includes the value being ranked.
+
+**Honest disclosure**: this is one convention among several reasonable
+ways to define percentile rank (e.g. strict `<` instead of `<=`, or an
+interpolated/averaged-rank definition for ties). It was chosen
+specifically because it has no tie-handling ambiguity — every value in
+the window, including exact duplicates, gets an unambiguous count —
+not because it is *the* standard definition. A different, equally
+defensible convention would produce different numbers on a window
+containing duplicate prices. For small windows (fewer than 5 samples,
+which happens for AMZN and NVDA today — see below) this number carries
+correspondingly less statistical meaning; that caveat should be disclosed
+alongside any demo/writeup use of this figure, not hidden.
+
+### volatility definition
+
+```
+volatility = sample standard deviation (ddof=1) of the window
+```
+
+Chosen over population standard deviation (ddof=0) because the window is
+a sample drawn from an underlying continuous price process, not a
+complete enumeration of that process — the standard framing in
+quantitative finance for exactly this situation. It also matches
+`numpy.std(ddof=1)` and pandas' `.std()` default, so a reader can
+spot-check the reference model's output with standard tooling without
+first having to guess which convention was used.
+
+### Window size and short-window handling
+
+N=20. As of 2026-09-05, indexed event counts per feed are TSLA 22, AMZN 9,
+PLTR 19, AMD 26, NVDA 13 — so AMZN and NVDA currently never reach a full
+window. `actualWindowSize` and `isFullWindow` on every `PriceRangeIndex`
+row make this state explicit rather than silent; consumers of this data
+(the AI decision engine, demo narration, writeup) should read
+`isFullWindow` before treating `movingAverage`/`volatility`/
+`percentileRank` as based on the intended N=20 sample size.

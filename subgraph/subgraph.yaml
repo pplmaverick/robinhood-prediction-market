@@ -18,6 +18,8 @@ dataSources:
       entities:
         - AnswerUpdated
         - NewRound
+        - FeedWindow
+        - PriceRangeIndex
       abis:
         - name: TSLARawAggregator
           file: ./abis/TSLARawAggregator.json
@@ -41,6 +43,8 @@ dataSources:
       entities:
         - AnswerUpdated
         - NewRound
+        - FeedWindow
+        - PriceRangeIndex
       abis:
         - name: AMZNRawAggregator
           file: ./abis/AMZNRawAggregator.json
@@ -64,6 +68,8 @@ dataSources:
       entities:
         - AnswerUpdated
         - NewRound
+        - FeedWindow
+        - PriceRangeIndex
       abis:
         - name: PLTRRawAggregator
           file: ./abis/PLTRRawAggregator.json
@@ -87,6 +93,8 @@ dataSources:
       entities:
         - AnswerUpdated
         - NewRound
+        - FeedWindow
+        - PriceRangeIndex
       abis:
         - name: AMDRawAggregator
           file: ./abis/AMDRawAggregator.json
@@ -110,6 +118,8 @@ dataSources:
       entities:
         - AnswerUpdated
         - NewRound
+        - FeedWindow
+        - PriceRangeIndex
       abis:
         - name: NVDARawAggregator
           file: ./abis/NVDARawAggregator.json

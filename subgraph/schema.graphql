@@ -19,3 +19,34 @@ type NewRound @entity(immutable: true) {
   blockTimestamp: BigInt!
   transactionHash: Bytes!
 }
+
+# Mutable per-feed rolling-window state. Pure internal bookkeeping for the
+# incremental mean/volatility/percentile computation, not the query target
+# (see PriceRangeIndex below for that) -- one entity per feed, updated in
+# place on every AnswerUpdated event so the handler never re-scans history.
+type FeedWindow @entity(immutable: false) {
+  id: Bytes! # feedAddress
+  feedAddress: Bytes!
+  prices: [BigDecimal!]! # rolling window, oldest first, max length 20
+  updatedAtBlock: BigInt!
+}
+
+# One immutable snapshot per AnswerUpdated event: the rolling-window
+# statistics computed right after that event's price was pushed into the
+# window. This is what the Python reference model is compared against,
+# row by row.
+type PriceRangeIndex @entity(immutable: true) {
+  id: Bytes! # same id as the triggering AnswerUpdated event
+  feedAddress: Bytes!
+  symbol: String! # e.g. "TSLA" -- hardcoded per data source for readability
+  roundId: BigInt! # from the triggering AnswerUpdated event
+  currentPrice: BigDecimal! # normalized price just pushed into the window
+  movingAverage: BigDecimal! # arithmetic mean of the window
+  volatility: BigDecimal! # sample standard deviation (ddof=1) of the window
+  percentileRank: BigDecimal! # % of window values <= currentPrice, 0-100
+  actualWindowSize: Int! # how many prices were actually in the window (<=20)
+  isFullWindow: Boolean! # actualWindowSize == 20
+  blockNumber: BigInt!
+  blockTimestamp: BigInt!
+  transactionHash: Bytes!
+}

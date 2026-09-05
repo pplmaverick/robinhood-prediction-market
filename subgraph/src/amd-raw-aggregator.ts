@@ -2,15 +2,30 @@ import {
   AnswerUpdated as AnswerUpdatedEvent,
   NewRound as NewRoundEvent
 } from "../generated/AMDRawAggregator/AMDRawAggregator"
-import { saveAnswerUpdated, saveNewRound } from "./raw-aggregator-common"
+import { saveAnswerUpdated, saveNewRound, updatePriceRangeIndex } from "./raw-aggregator-common"
+
+const SYMBOL = "AMD"
+const DECIMALS: u8 = 8
 
 export function handleAnswerUpdated(event: AnswerUpdatedEvent): void {
+  let id = event.transaction.hash.concatI32(event.logIndex.toI32())
   saveAnswerUpdated(
-    event.transaction.hash.concatI32(event.logIndex.toI32()),
+    id,
     event.address,
     event.params.current,
     event.params.roundId,
     event.params.updatedAt,
+    event.block.number,
+    event.block.timestamp,
+    event.transaction.hash
+  )
+  updatePriceRangeIndex(
+    id,
+    event.address,
+    SYMBOL,
+    event.params.roundId,
+    event.params.current,
+    DECIMALS,
     event.block.number,
     event.block.timestamp,
     event.transaction.hash
