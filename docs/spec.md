@@ -66,6 +66,35 @@ second.
   round across all 5 feeds ends by 2026-06-23 13:57:40 UTC (AMD); the
   earliest real settlement is 2026-07-03 11:17:55 UTC (market 0, TSLA) —
   roughly a 9.9-day buffer. This is not a close call.
+- **Total: 222 anomalous rounds across all 5 feeds** (TSLA 37 + AMZN 26 +
+  PLTR 50 + AMD 85 + NVDA 24 = 222), counting rounds 1 through the "last
+  anomalous round" value in the table above, inclusive, for each feed.
+  **Verified 2026-09-05**: re-queried `getRoundData()` for each feed's exact
+  cutoff pair (last-anomalous / first-normal round) directly against the
+  live mainnet RPC; all 10 values match this table exactly, no change from
+  the original 2026-09-03 derivation. Genesis rounds are immutable
+  historical data, so this was expected barring a feed redeployment — none
+  occurred.
+
+## RPC `eth_getLogs` range strategy (2026-09-05 spike)
+
+Robinhood Chain mainnet (`rpc.mainnet.chain.robinhood.com`) has **no hard
+block-range cap** on `eth_getLogs` — unlike Arc Testnet's documented 10K-block
+limit, a single request spanning the entire chain history (~54.68M blocks)
+was accepted without a "range too large"-style rejection. However, large
+full-history queries are **not reliably successful**: querying 3 of 5
+Chainlink raw aggregators across their full history returned
+`{"code":-32000,"message":"log query timed out"}` on repeated, spaced-out
+retries (not a rate-limit fluke); 2 of 5 succeeded. Reducing to a
+20,000,000-block window succeeded for all 5 feeds tested. A separate,
+independent failure mode — `{"code":429,"message":"Too Many Requests"}` —
+appeared under rapid back-to-back requests and disappeared with a delay.
+
+**Adopted design**: chunk `eth_getLogs` queries into 10–20 million block
+windows; apply retry/backoff to both `-32000` (timeout) and `429`
+(rate-limit) errors; do not assume a single full-history query will
+succeed. Apply this wherever a subgraph indexing script or the relayer
+uses `eth_getLogs` against this RPC endpoint.
 
 ## Handling approach
 
