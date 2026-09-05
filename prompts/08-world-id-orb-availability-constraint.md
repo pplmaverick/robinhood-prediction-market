@@ -19,7 +19,7 @@ surfaced an external constraint, not an engineering one:
    inserted into that tree. This is not a restriction AgentKit chose to enforce more
    strictly than necessary — it is what the deployed contract's own configuration requires.
 2. **Taiwan currently has no stably operating Orb location.** Biometric-data collection is
-   regulated by the FSC (金管會); historical Orb locations here have been repeatedly removed
+   regulated by Taiwan's Financial Supervisory Commission (FSC); historical Orb locations here have been repeatedly removed
    under regulatory pressure. This is an external, jurisdiction-level constraint, not
    something resolvable within this project's scope or timeline.
 3. **A possible mitigation exists but is unconfirmed.** ETHGlobal's own ETHOnline 2026
