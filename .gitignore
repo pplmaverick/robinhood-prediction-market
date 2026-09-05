@@ -4,3 +4,4 @@ artifacts/
 cache/
 .vercel
 frontend/dist
+__pycache__/
