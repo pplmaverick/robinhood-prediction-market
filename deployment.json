@@ -1,0 +1,15 @@
+{
+  "AgentStockMarket": {
+    "contractAddress": "0xE8b3916Ea16AD2F2C0910bB94005e30F5CC341D3",
+    "relayerAddress": "0x67BBA560662eca86421BfD6Bb680ce228542defE",
+    "sourceMarket": "0x72DAb8B1B53b3CF028e9A0d1E21178981f264245",
+    "maxBetSizeWei": "1000000000000000",
+    "deployTxHash": "0x59657c48d3187d4e3d5eabe75b9b9e52b65cf94235f183d87a0b34b211f716d2",
+    "deployedAt": "2026-09-05T08:28:43Z",
+    "deployBlockNumber": 54978289,
+    "chainId": 4663,
+    "gasUsed": 1672009,
+    "effectiveGasPriceWei": "402086000",
+    "deployerAddress": "0xed2B5717c9b936ecC76d75401026A99143e278F5"
+  }
+}
