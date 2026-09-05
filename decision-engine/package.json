@@ -1,0 +1,15 @@
+{
+  "name": "@robinhood-stock-market/decision-engine",
+  "version": "0.1.0",
+  "description": "AI decision engine: reads Graph PriceRangeIndex output, decides BULL/BEAR/NO_TRADE, and (for non-NO_TRADE decisions) calls the AgentKit relayer to attach a World ID attestation status. Does not call placeBet().",
+  "type": "module",
+  "main": "src/decision-engine.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@worldcoin/agentkit-core": "0.2.1",
+    "viem": "2.56.3"
+  }
+}

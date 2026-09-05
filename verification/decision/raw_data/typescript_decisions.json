@@ -1,0 +1,2252 @@
+[
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 180.72515,
+      "movingAverage": 180.72515,
+      "volatility": 0,
+      "percentileRank": 100,
+      "actualWindowSize": 1,
+      "isFullWindow": false,
+      "roundId": "1765",
+      "blockNumber": "54231169",
+      "blockTimestamp": "1788521462"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UNKNOWN",
+      "previousMovingAverage": null,
+      "previousBlockNumber": null,
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 365.5209,
+      "movingAverage": 365.5209,
+      "volatility": 0,
+      "percentileRank": 100,
+      "actualWindowSize": 1,
+      "isFullWindow": false,
+      "roundId": "1099",
+      "blockNumber": "54236117",
+      "blockTimestamp": "1788521964"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UNKNOWN",
+      "previousMovingAverage": null,
+      "previousBlockNumber": null,
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 367.3966,
+      "movingAverage": 366.45875,
+      "volatility": 1.3263201894716072,
+      "percentileRank": 100,
+      "actualWindowSize": 2,
+      "isFullWindow": false,
+      "roundId": "1100",
+      "blockNumber": "54263709",
+      "blockTimestamp": "1788524755"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 365.5209,
+      "previousBlockNumber": "54236117",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 461.9375,
+      "movingAverage": 461.9375,
+      "volatility": 0,
+      "percentileRank": 100,
+      "actualWindowSize": 1,
+      "isFullWindow": false,
+      "roundId": "2587",
+      "blockNumber": "54266813",
+      "blockTimestamp": "1788525071"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UNKNOWN",
+      "previousMovingAverage": null,
+      "previousBlockNumber": null,
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 365.1355,
+      "movingAverage": 366.0176666666667,
+      "volatility": 1.2096388483069371,
+      "percentileRank": 33.333333333333336,
+      "actualWindowSize": 3,
+      "isFullWindow": false,
+      "roundId": "1101",
+      "blockNumber": "54266955",
+      "blockTimestamp": "1788525085"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 366.45875,
+      "previousBlockNumber": "54263709",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 179.8021,
+      "movingAverage": 180.263625,
+      "volatility": 0.6526949143742427,
+      "percentileRank": 50,
+      "actualWindowSize": 2,
+      "isFullWindow": false,
+      "roundId": "1766",
+      "blockNumber": "54267616",
+      "blockTimestamp": "1788525153"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 180.72515,
+      "previousBlockNumber": "54231169",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 259.0439,
+      "movingAverage": 259.0439,
+      "volatility": 0,
+      "percentileRank": 100,
+      "actualWindowSize": 1,
+      "isFullWindow": false,
+      "roundId": "708",
+      "blockNumber": "54269817",
+      "blockTimestamp": "1788525375"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UNKNOWN",
+      "previousMovingAverage": null,
+      "previousBlockNumber": null,
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 459.501,
+      "movingAverage": 460.71925,
+      "volatility": 1.722865672361023,
+      "percentileRank": 50,
+      "actualWindowSize": 2,
+      "isFullWindow": false,
+      "roundId": "2588",
+      "blockNumber": "54276563",
+      "blockTimestamp": "1788526061"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 461.9375,
+      "previousBlockNumber": "54266813",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 230.16175,
+      "movingAverage": 230.16175,
+      "volatility": 0,
+      "percentileRank": 100,
+      "actualWindowSize": 1,
+      "isFullWindow": false,
+      "roundId": "982",
+      "blockNumber": "54276665",
+      "blockTimestamp": "1788526071"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UNKNOWN",
+      "previousMovingAverage": null,
+      "previousBlockNumber": null,
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 459.22345,
+      "movingAverage": 460.22065,
+      "volatility": 1.493298008603775,
+      "percentileRank": 33.333333333333336,
+      "actualWindowSize": 3,
+      "isFullWindow": false,
+      "roundId": "2589",
+      "blockNumber": "54277448",
+      "blockTimestamp": "1788526151"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 460.71925,
+      "previousBlockNumber": "54276563",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 230.26205,
+      "movingAverage": 230.2119,
+      "volatility": 0.07092281015301072,
+      "percentileRank": 100,
+      "actualWindowSize": 2,
+      "isFullWindow": false,
+      "roundId": "983",
+      "blockNumber": "54278144",
+      "blockTimestamp": "1788526222"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.16175,
+      "previousBlockNumber": "54276665",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 230.29955,
+      "movingAverage": 230.24111666666667,
+      "volatility": 0.07124509339830591,
+      "percentileRank": 100,
+      "actualWindowSize": 3,
+      "isFullWindow": false,
+      "roundId": "984",
+      "blockNumber": "54279642",
+      "blockTimestamp": "1788526371"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.2119,
+      "previousBlockNumber": "54278144",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 459.20395,
+      "movingAverage": 459.966475,
+      "volatility": 1.3210017729612125,
+      "percentileRank": 25,
+      "actualWindowSize": 4,
+      "isFullWindow": false,
+      "roundId": "2590",
+      "blockNumber": "54279838",
+      "blockTimestamp": "1788526391"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 460.22065,
+      "previousBlockNumber": "54277448",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 363.2523,
+      "movingAverage": 365.326325,
+      "volatility": 1.6992049010738326,
+      "percentileRank": 25,
+      "actualWindowSize": 4,
+      "isFullWindow": false,
+      "roundId": "1102",
+      "blockNumber": "54282051",
+      "blockTimestamp": "1788526616"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 366.0176666666667,
+      "previousBlockNumber": "54266955",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 461.6282,
+      "movingAverage": 460.29882,
+      "volatility": 1.364203158715739,
+      "percentileRank": 80,
+      "actualWindowSize": 5,
+      "isFullWindow": false,
+      "roundId": "2591",
+      "blockNumber": "54294144",
+      "blockTimestamp": "1788527832"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 459.966475,
+      "previousBlockNumber": "54279838",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 231.48675,
+      "movingAverage": 230.552525,
+      "volatility": 0.6255273848255299,
+      "percentileRank": 100,
+      "actualWindowSize": 4,
+      "isFullWindow": false,
+      "roundId": "985",
+      "blockNumber": "54297510",
+      "blockTimestamp": "1788528172"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.24111666666667,
+      "previousBlockNumber": "54279642",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 230.115,
+      "movingAverage": 230.46502,
+      "volatility": 0.5759765680997796,
+      "percentileRank": 20,
+      "actualWindowSize": 5,
+      "isFullWindow": false,
+      "roundId": "986",
+      "blockNumber": "54302015",
+      "blockTimestamp": "1788528623"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 230.552525,
+      "previousBlockNumber": "54297510",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 181.02455,
+      "movingAverage": 180.51726666666667,
+      "volatility": 0.6371872651217484,
+      "percentileRank": 100,
+      "actualWindowSize": 3,
+      "isFullWindow": false,
+      "roundId": "1767",
+      "blockNumber": "54302128",
+      "blockTimestamp": "1788528634"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 180.263625,
+      "previousBlockNumber": "54267616",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 361.33,
+      "movingAverage": 364.52706,
+      "volatility": 2.315080057579003,
+      "percentileRank": 20,
+      "actualWindowSize": 5,
+      "isFullWindow": false,
+      "roundId": "1103",
+      "blockNumber": "54302341",
+      "blockTimestamp": "1788528656"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 365.326325,
+      "previousBlockNumber": "54282051",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 260.77725,
+      "movingAverage": 259.910575,
+      "volatility": 1.2256635391697022,
+      "percentileRank": 100,
+      "actualWindowSize": 2,
+      "isFullWindow": false,
+      "roundId": "709",
+      "blockNumber": "54302533",
+      "blockTimestamp": "1788528676"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 259.0439,
+      "previousBlockNumber": "54269817",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "1",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 363.45,
+      "movingAverage": 364.34755,
+      "volatility": 2.1168418880492705,
+      "percentileRank": 50,
+      "actualWindowSize": 6,
+      "isFullWindow": false,
+      "roundId": "1104",
+      "blockNumber": "54302632",
+      "blockTimestamp": "1788528686"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 364.52706,
+      "previousBlockNumber": "54302341",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 179.3734,
+      "movingAverage": 180.2313,
+      "volatility": 0.7731620000577715,
+      "percentileRank": 25,
+      "actualWindowSize": 4,
+      "isFullWindow": false,
+      "roundId": "1768",
+      "blockNumber": "54303003",
+      "blockTimestamp": "1788528724"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 180.51726666666667,
+      "previousBlockNumber": "54302128",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 458.90999999,
+      "movingAverage": 460.0673499983333,
+      "volatility": 1.3454777503286333,
+      "percentileRank": 16.666666666666668,
+      "actualWindowSize": 6,
+      "isFullWindow": false,
+      "roundId": "2592",
+      "blockNumber": "54303075",
+      "blockTimestamp": "1788528732"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 460.29882,
+      "previousBlockNumber": "54294144",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 464.495,
+      "movingAverage": 460.69987142714285,
+      "volatility": 2.0758553624583747,
+      "percentileRank": 100,
+      "actualWindowSize": 7,
+      "isFullWindow": false,
+      "roundId": "2593",
+      "blockNumber": "54303076",
+      "blockTimestamp": "1788528732"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 460.0673499983333,
+      "previousBlockNumber": "54303075",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 231.315,
+      "movingAverage": 230.60668333333334,
+      "volatility": 0.6211362215059324,
+      "percentileRank": 83.33333333333333,
+      "actualWindowSize": 6,
+      "isFullWindow": false,
+      "roundId": "987",
+      "blockNumber": "54303179",
+      "blockTimestamp": "1788528742"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.46502,
+      "previousBlockNumber": "54302015",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.6666666666666665,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 360.985,
+      "movingAverage": 363.8671857142857,
+      "volatility": 2.312883894930433,
+      "percentileRank": 14.285714285714286,
+      "actualWindowSize": 7,
+      "isFullWindow": false,
+      "roundId": "1105",
+      "blockNumber": "54303218",
+      "blockTimestamp": "1788528746"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 364.34755,
+      "previousBlockNumber": "54302632",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 180.355,
+      "movingAverage": 180.25604,
+      "volatility": 0.6718593206542572,
+      "percentileRank": 60,
+      "actualWindowSize": 5,
+      "isFullWindow": false,
+      "roundId": "1769",
+      "blockNumber": "54303279",
+      "blockTimestamp": "1788528754"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 180.2313,
+      "previousBlockNumber": "54303003",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 179.445,
+      "movingAverage": 180.12086666666667,
+      "volatility": 0.6861100040566867,
+      "percentileRank": 33.333333333333336,
+      "actualWindowSize": 6,
+      "isFullWindow": false,
+      "roundId": "1770",
+      "blockNumber": "54303576",
+      "blockTimestamp": "1788528784"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 180.25604,
+      "previousBlockNumber": "54303279",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 358.94,
+      "movingAverage": 363.2512875,
+      "volatility": 2.7604116061804467,
+      "percentileRank": 12.5,
+      "actualWindowSize": 8,
+      "isFullWindow": false,
+      "roundId": "1106",
+      "blockNumber": "54304088",
+      "blockTimestamp": "1788528836"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 363.8671857142857,
+      "previousBlockNumber": "54303218",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.75,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 258.96,
+      "movingAverage": 259.5937166666667,
+      "volatility": 1.0258280391144188,
+      "percentileRank": 33.333333333333336,
+      "actualWindowSize": 3,
+      "isFullWindow": false,
+      "roundId": "710",
+      "blockNumber": "54304284",
+      "blockTimestamp": "1788528856"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 259.910575,
+      "previousBlockNumber": "54302533",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 467.095,
+      "movingAverage": 461.49926249875,
+      "volatility": 2.9674547462077245,
+      "percentileRank": 100,
+      "actualWindowSize": 8,
+      "isFullWindow": false,
+      "roundId": "2594",
+      "blockNumber": "54304539",
+      "blockTimestamp": "1788528882"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 460.69987142714285,
+      "previousBlockNumber": "54303076",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 178.1834,
+      "movingAverage": 179.8440857142857,
+      "volatility": 0.9636093523459449,
+      "percentileRank": 14.285714285714286,
+      "actualWindowSize": 7,
+      "isFullWindow": false,
+      "roundId": "1771",
+      "blockNumber": "54304759",
+      "blockTimestamp": "1788528905"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 180.12086666666667,
+      "previousBlockNumber": "54303576",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 361.07,
+      "movingAverage": 363.0089222222222,
+      "volatility": 2.682546655129123,
+      "percentileRank": 33.333333333333336,
+      "actualWindowSize": 9,
+      "isFullWindow": false,
+      "roundId": "1107",
+      "blockNumber": "54305315",
+      "blockTimestamp": "1788528961"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 363.2512875,
+      "previousBlockNumber": "54304088",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 232.75555,
+      "movingAverage": 230.91366428571428,
+      "volatility": 0.9905400752090943,
+      "percentileRank": 100,
+      "actualWindowSize": 7,
+      "isFullWindow": false,
+      "roundId": "988",
+      "blockNumber": "54306732",
+      "blockTimestamp": "1788529103"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.60668333333334,
+      "previousBlockNumber": "54303179",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 177.17,
+      "movingAverage": 179.509825,
+      "volatility": 1.2998983756982148,
+      "percentileRank": 12.5,
+      "actualWindowSize": 8,
+      "isFullWindow": false,
+      "roundId": "1772",
+      "blockNumber": "54307015",
+      "blockTimestamp": "1788529132"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 179.8440857142857,
+      "previousBlockNumber": "54304759",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.75,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 358.46235,
+      "movingAverage": 362.554265,
+      "volatility": 2.90923127552146,
+      "percentileRank": 10,
+      "actualWindowSize": 10,
+      "isFullWindow": false,
+      "roundId": "1108",
+      "blockNumber": "54308581",
+      "blockTimestamp": "1788529291"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 363.0089222222222,
+      "previousBlockNumber": "54305315",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 464.73605,
+      "movingAverage": 461.85890555444445,
+      "volatility": 2.9781122140586045,
+      "percentileRank": 88.88888888888889,
+      "actualWindowSize": 9,
+      "isFullWindow": false,
+      "roundId": "2595",
+      "blockNumber": "54310631",
+      "blockTimestamp": "1788529499"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 461.49926249875,
+      "previousBlockNumber": "54304539",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 467.24525,
+      "movingAverage": 462.397539999,
+      "volatility": 3.2840465336016784,
+      "percentileRank": 100,
+      "actualWindowSize": 10,
+      "isFullWindow": false,
+      "roundId": "2596",
+      "blockNumber": "54311811",
+      "blockTimestamp": "1788529619"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 461.85890555444445,
+      "previousBlockNumber": "54310631",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 234.0786,
+      "movingAverage": 231.30928125,
+      "volatility": 1.4467566514541366,
+      "percentileRank": 100,
+      "actualWindowSize": 8,
+      "isFullWindow": false,
+      "roundId": "989",
+      "blockNumber": "54312633",
+      "blockTimestamp": "1788529703"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 230.91366428571428,
+      "previousBlockNumber": "54306732",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 257.485,
+      "movingAverage": 259.0665375,
+      "volatility": 1.3465586776266627,
+      "percentileRank": 25,
+      "actualWindowSize": 4,
+      "isFullWindow": false,
+      "roundId": "711",
+      "blockNumber": "54312732",
+      "blockTimestamp": "1788529713"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 259.5937166666667,
+      "previousBlockNumber": "54304284",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 356.39,
+      "movingAverage": 361.9938772727273,
+      "volatility": 3.3274077608074752,
+      "percentileRank": 9.090909090909092,
+      "actualWindowSize": 11,
+      "isFullWindow": false,
+      "roundId": "1109",
+      "blockNumber": "54314238",
+      "blockTimestamp": "1788529862"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 362.554265,
+      "previousBlockNumber": "54308581",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8181818181818181,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 358.22565,
+      "movingAverage": 361.67985833333336,
+      "volatility": 3.3538670504653236,
+      "percentileRank": 16.666666666666668,
+      "actualWindowSize": 12,
+      "isFullWindow": false,
+      "roundId": "1110",
+      "blockNumber": "54317207",
+      "blockTimestamp": "1788530162"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 361.9938772727273,
+      "previousBlockNumber": "54314238",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 469.6974,
+      "movingAverage": 463.06116363545453,
+      "volatility": 3.8145543790655,
+      "percentileRank": 100,
+      "actualWindowSize": 11,
+      "isFullWindow": false,
+      "roundId": "2597",
+      "blockNumber": "54317771",
+      "blockTimestamp": "1788530219"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 462.397539999,
+      "previousBlockNumber": "54311811",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 360.14805,
+      "movingAverage": 361.5620269230769,
+      "volatility": 3.2390663231358934,
+      "percentileRank": 38.46153846153846,
+      "actualWindowSize": 13,
+      "isFullWindow": false,
+      "roundId": "1111",
+      "blockNumber": "54318977",
+      "blockTimestamp": "1788530342"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 361.67985833333336,
+      "previousBlockNumber": "54317207",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 357.93125,
+      "movingAverage": 361.3026857142857,
+      "volatility": 3.259772747354577,
+      "percentileRank": 14.285714285714286,
+      "actualWindowSize": 14,
+      "isFullWindow": false,
+      "roundId": "1112",
+      "blockNumber": "54320744",
+      "blockTimestamp": "1788530523"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 361.5620269230769,
+      "previousBlockNumber": "54318977",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 356.03999999,
+      "movingAverage": 360.95183999933334,
+      "volatility": 3.422499181198241,
+      "percentileRank": 6.666666666666667,
+      "actualWindowSize": 15,
+      "isFullWindow": false,
+      "roundId": "1113",
+      "blockNumber": "54325197",
+      "blockTimestamp": "1788530972"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 361.3026857142857,
+      "previousBlockNumber": "54320744",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8666666666666667,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 355.73035,
+      "movingAverage": 360.625496874375,
+      "volatility": 3.5547992862612623,
+      "percentileRank": 6.25,
+      "actualWindowSize": 16,
+      "isFullWindow": false,
+      "roundId": "1114",
+      "blockNumber": "54325787",
+      "blockTimestamp": "1788531032"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 360.95183999933334,
+      "previousBlockNumber": "54325197",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.875,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 355.5423,
+      "movingAverage": 360.3264852935294,
+      "volatility": 3.6560559795918848,
+      "percentileRank": 5.882352941176471,
+      "actualWindowSize": 17,
+      "isFullWindow": false,
+      "roundId": "1115",
+      "blockNumber": "54326668",
+      "blockTimestamp": "1788531122"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 360.625496874375,
+      "previousBlockNumber": "54325787",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8823529411764706,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 472.46,
+      "movingAverage": 463.8443999991667,
+      "volatility": 4.537569089869075,
+      "percentileRank": 100,
+      "actualWindowSize": 12,
+      "isFullWindow": false,
+      "roundId": "2598",
+      "blockNumber": "54328102",
+      "blockTimestamp": "1788531270"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 463.06116363545453,
+      "previousBlockNumber": "54317771",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 473.03,
+      "movingAverage": 464.5509846146154,
+      "volatility": 5.03628260252327,
+      "percentileRank": 100,
+      "actualWindowSize": 13,
+      "isFullWindow": false,
+      "roundId": "2599",
+      "blockNumber": "54329017",
+      "blockTimestamp": "1788531360"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 463.8443999991667,
+      "previousBlockNumber": "54328102",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 176.2717,
+      "movingAverage": 179.15003333333334,
+      "volatility": 1.6259056566649246,
+      "percentileRank": 11.11111111111111,
+      "actualWindowSize": 9,
+      "isFullWindow": false,
+      "roundId": "1773",
+      "blockNumber": "54331382",
+      "blockTimestamp": "1788531603"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 179.509825,
+      "previousBlockNumber": "54307015",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7777777777777777,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 353.70605,
+      "movingAverage": 359.95868333277775,
+      "volatility": 3.874980680091296,
+      "percentileRank": 5.555555555555555,
+      "actualWindowSize": 18,
+      "isFullWindow": false,
+      "roundId": "1116",
+      "blockNumber": "54331515",
+      "blockTimestamp": "1788531616"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 360.3264852935294,
+      "previousBlockNumber": "54326668",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8888888888888888,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 470.375,
+      "movingAverage": 464.96698571357143,
+      "volatility": 5.08289793052896,
+      "percentileRank": 85.71428571428571,
+      "actualWindowSize": 14,
+      "isFullWindow": false,
+      "roundId": "2600",
+      "blockNumber": "54332276",
+      "blockTimestamp": "1788531690"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 464.5509846146154,
+      "previousBlockNumber": "54329017",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.7142857142857142,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 175.90535,
+      "movingAverage": 178.825565,
+      "volatility": 1.84462361638869,
+      "percentileRank": 10,
+      "actualWindowSize": 10,
+      "isFullWindow": false,
+      "roundId": "1774",
+      "blockNumber": "54332366",
+      "blockTimestamp": "1788531699"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 179.15003333333334,
+      "previousBlockNumber": "54331382",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 469.235,
+      "movingAverage": 465.2515199993333,
+      "volatility": 5.0204411971091485,
+      "percentileRank": 73.33333333333333,
+      "actualWindowSize": 15,
+      "isFullWindow": false,
+      "roundId": "2601",
+      "blockNumber": "54333747",
+      "blockTimestamp": "1788531840"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 464.96698571357143,
+      "previousBlockNumber": "54332276",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 353.76085,
+      "movingAverage": 359.63248157842105,
+      "volatility": 4.025298287931952,
+      "percentileRank": 10.526315789473685,
+      "actualWindowSize": 19,
+      "isFullWindow": false,
+      "roundId": "1117",
+      "blockNumber": "54333770",
+      "blockTimestamp": "1788531842"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 359.95868333277775,
+      "previousBlockNumber": "54331515",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7894736842105263,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 176.8849,
+      "movingAverage": 178.6491409090909,
+      "volatility": 1.8451972024445222,
+      "percentileRank": 27.272727272727273,
+      "actualWindowSize": 11,
+      "isFullWindow": false,
+      "roundId": "1775",
+      "blockNumber": "54333831",
+      "blockTimestamp": "1788531849"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 178.825565,
+      "previousBlockNumber": "54332366",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 175.91275,
+      "movingAverage": 178.42110833333334,
+      "volatility": 1.9285269012941333,
+      "percentileRank": 16.666666666666668,
+      "actualWindowSize": 12,
+      "isFullWindow": false,
+      "roundId": "1776",
+      "blockNumber": "54349751",
+      "blockTimestamp": "1788533462"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 178.6491409090909,
+      "previousBlockNumber": "54333831",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 232.85515,
+      "movingAverage": 231.48104444444445,
+      "volatility": 1.4480987749987146,
+      "percentileRank": 88.88888888888889,
+      "actualWindowSize": 9,
+      "isFullWindow": false,
+      "roundId": "990",
+      "blockNumber": "54351480",
+      "blockTimestamp": "1788533634"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 231.30928125,
+      "previousBlockNumber": "54312633",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 232.79695,
+      "movingAverage": 231.612635,
+      "volatility": 1.4272883063600788,
+      "percentileRank": 80,
+      "actualWindowSize": 10,
+      "isFullWindow": false,
+      "roundId": "991",
+      "blockNumber": "54352936",
+      "blockTimestamp": "1788533784"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 231.48104444444445,
+      "previousBlockNumber": "54351480",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "4",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 232.7046,
+      "movingAverage": 231.71190454545456,
+      "volatility": 1.3934976095161673,
+      "percentileRank": 63.63636363636363,
+      "actualWindowSize": 11,
+      "isFullWindow": false,
+      "roundId": "992",
+      "blockNumber": "54353825",
+      "blockTimestamp": "1788533874"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 231.612635,
+      "previousBlockNumber": "54352936",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 471.67885,
+      "movingAverage": 465.653228124375,
+      "volatility": 5.109444050936189,
+      "percentileRank": 87.5,
+      "actualWindowSize": 16,
+      "isFullWindow": false,
+      "roundId": "2602",
+      "blockNumber": "54353890",
+      "blockTimestamp": "1788533880"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 465.2515199993333,
+      "previousBlockNumber": "54333747",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.75,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 472.685,
+      "movingAverage": 466.0668617641177,
+      "volatility": 5.232909778273367,
+      "percentileRank": 94.11764705882354,
+      "actualWindowSize": 17,
+      "isFullWindow": false,
+      "roundId": "2603",
+      "blockNumber": "54355405",
+      "blockTimestamp": "1788534031"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 465.653228124375,
+      "previousBlockNumber": "54353890",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.8823529411764707,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 176.805,
+      "movingAverage": 178.2967923076923,
+      "volatility": 1.9000498695041044,
+      "percentileRank": 30.76923076923077,
+      "actualWindowSize": 13,
+      "isFullWindow": false,
+      "roundId": "1777",
+      "blockNumber": "54355872",
+      "blockTimestamp": "1788534079"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 178.42110833333334,
+      "previousBlockNumber": "54349751",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 256.0895,
+      "movingAverage": 258.47113,
+      "volatility": 1.769877300690644,
+      "percentileRank": 20,
+      "actualWindowSize": 5,
+      "isFullWindow": false,
+      "roundId": "712",
+      "blockNumber": "54356027",
+      "blockTimestamp": "1788534095"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 259.0665375,
+      "previousBlockNumber": "54312732",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "1",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 472.68,
+      "movingAverage": 466.4342583327778,
+      "volatility": 5.310574738984224,
+      "percentileRank": 88.88888888888889,
+      "actualWindowSize": 18,
+      "isFullWindow": false,
+      "roundId": "2604",
+      "blockNumber": "54356873",
+      "blockTimestamp": "1788534181"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 466.0668617641177,
+      "previousBlockNumber": "54355405",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 255.92905,
+      "movingAverage": 258.04745,
+      "volatility": 1.8928816608546875,
+      "percentileRank": 16.666666666666668,
+      "actualWindowSize": 6,
+      "isFullWindow": false,
+      "roundId": "713",
+      "blockNumber": "54357794",
+      "blockTimestamp": "1788534275"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 258.47113,
+      "previousBlockNumber": "54356027",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "1",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 175.805,
+      "movingAverage": 178.11880714285715,
+      "volatility": 1.9431893078387656,
+      "percentileRank": 7.142857142857143,
+      "actualWindowSize": 14,
+      "isFullWindow": false,
+      "roundId": "1778",
+      "blockNumber": "54366481",
+      "blockTimestamp": "1788535151"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 178.2967923076923,
+      "previousBlockNumber": "54355872",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8571428571428571,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 175.805,
+      "movingAverage": 177.96455333333333,
+      "volatility": 1.9654986798580685,
+      "percentileRank": 13.333333333333334,
+      "actualWindowSize": 15,
+      "isFullWindow": false,
+      "roundId": "1779",
+      "blockNumber": "54367955",
+      "blockTimestamp": "1788535301"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 178.11880714285715,
+      "previousBlockNumber": "54366481",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.7333333333333333,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 470.29499999,
+      "movingAverage": 466.6374552621053,
+      "volatility": 5.236401989310938,
+      "percentileRank": 68.42105263157895,
+      "actualWindowSize": 19,
+      "isFullWindow": false,
+      "roundId": "2605",
+      "blockNumber": "54368145",
+      "blockTimestamp": "1788535321"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 466.4342583327778,
+      "previousBlockNumber": "54356873",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 469.80165,
+      "movingAverage": 466.795664999,
+      "volatility": 5.145615538894952,
+      "percentileRank": 65,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2606",
+      "blockNumber": "54370251",
+      "blockTimestamp": "1788535531"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 466.6374552621053,
+      "previousBlockNumber": "54368145",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 231.4583,
+      "movingAverage": 231.69077083333335,
+      "volatility": 1.3306632501156457,
+      "percentileRank": 50,
+      "actualWindowSize": 12,
+      "isFullWindow": false,
+      "roundId": "993",
+      "blockNumber": "54373759",
+      "blockTimestamp": "1788535890"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 231.71190454545456,
+      "previousBlockNumber": "54353825",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 351.94995,
+      "movingAverage": 359.2483549995,
+      "volatility": 4.278001872515443,
+      "percentileRank": 5,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "1118",
+      "blockNumber": "54383889",
+      "blockTimestamp": "1788536914"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 359.63248157842105,
+      "previousBlockNumber": "54333770",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.9,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 351.93085,
+      "movingAverage": 358.5688524995,
+      "volatility": 4.3084451102209655,
+      "percentileRank": 5,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "1119",
+      "blockNumber": "54385692",
+      "blockTimestamp": "1788537094"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 359.2483549995,
+      "previousBlockNumber": "54383889",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.9,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "0",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 472.1787,
+      "movingAverage": 467.307724999,
+      "volatility": 5.146286428099131,
+      "percentileRank": 80,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2607",
+      "blockNumber": "54395567",
+      "blockTimestamp": "1788538096"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 466.795664999,
+      "previousBlockNumber": "54370251",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 0.6,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 174.925,
+      "movingAverage": 177.77458125,
+      "volatility": 2.04525540433422,
+      "percentileRank": 6.25,
+      "actualWindowSize": 16,
+      "isFullWindow": false,
+      "roundId": "1780",
+      "blockNumber": "54407710",
+      "blockTimestamp": "1788539323"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 177.96455333333333,
+      "previousBlockNumber": "54367955",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.875,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 174.915,
+      "movingAverage": 177.6063705882353,
+      "volatility": 2.0982468560874534,
+      "percentileRank": 5.882352941176471,
+      "actualWindowSize": 17,
+      "isFullWindow": false,
+      "roundId": "1781",
+      "blockNumber": "54408631",
+      "blockTimestamp": "1788539413"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 177.77458125,
+      "previousBlockNumber": "54407710",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8823529411764706,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 257.25345,
+      "movingAverage": 257.93402142857144,
+      "volatility": 1.7538233769057112,
+      "percentileRank": 42.857142857142854,
+      "actualWindowSize": 7,
+      "isFullWindow": false,
+      "roundId": "714",
+      "blockNumber": "54410170",
+      "blockTimestamp": "1788539569"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 258.04745,
+      "previousBlockNumber": "54357794",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 174.84905,
+      "movingAverage": 177.4531861111111,
+      "volatility": 2.1368293721832736,
+      "percentileRank": 5.555555555555555,
+      "actualWindowSize": 18,
+      "isFullWindow": false,
+      "roundId": "1782",
+      "blockNumber": "54411292",
+      "blockTimestamp": "1788539683"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 177.6063705882353,
+      "previousBlockNumber": "54408631",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8888888888888888,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 257.36,
+      "movingAverage": 257.86226875,
+      "volatility": 1.6363588346293862,
+      "percentileRank": 50,
+      "actualWindowSize": 8,
+      "isFullWindow": false,
+      "roundId": "715",
+      "blockNumber": "54413731",
+      "blockTimestamp": "1788539929"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 257.93402142857144,
+      "previousBlockNumber": "54410170",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 474.5967,
+      "movingAverage": 468.062509999,
+      "volatility": 5.047100310972734,
+      "percentileRank": 100,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2608",
+      "blockNumber": "54415811",
+      "blockTimestamp": "1788540141"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 467.307724999,
+      "previousBlockNumber": "54395567",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 474.815,
+      "movingAverage": 468.842087499,
+      "volatility": 4.808454874976163,
+      "percentileRank": 100,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2609",
+      "blockNumber": "54416731",
+      "blockTimestamp": "1788540232"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 468.062509999,
+      "previousBlockNumber": "54415811",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "NVDA",
+      "currentPrice": 230.23665,
+      "movingAverage": 231.57891538461539,
+      "volatility": 1.336323551044777,
+      "percentileRank": 23.076923076923077,
+      "actualWindowSize": 13,
+      "isFullWindow": false,
+      "roundId": "994",
+      "blockNumber": "54453811",
+      "blockTimestamp": "1788543984"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 231.69077083333335,
+      "previousBlockNumber": "54373759",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 472.2903,
+      "movingAverage": 469.496404999,
+      "volatility": 4.290364814541485,
+      "percentileRank": 70,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2610",
+      "blockNumber": "54463762",
+      "blockTimestamp": "1788544995"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 468.842087499,
+      "previousBlockNumber": "54416731",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "TSLA",
+      "currentPrice": 353.98495,
+      "movingAverage": 357.8982699995,
+      "volatility": 3.8850638719545656,
+      "percentileRank": 25,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "1120",
+      "blockNumber": "54470486",
+      "blockTimestamp": "1788545676"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "DOWN",
+      "previousMovingAverage": 358.5688524995,
+      "previousBlockNumber": "54385692",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "PLTR",
+      "currentPrice": 173.9498,
+      "movingAverage": 177.26879736842105,
+      "volatility": 2.226736591995465,
+      "percentileRank": 5.2631578947368425,
+      "actualWindowSize": 19,
+      "isFullWindow": false,
+      "roundId": "1783",
+      "blockNumber": "54500648",
+      "blockTimestamp": "1788548733"
+    },
+    "inputB": {
+      "level": "LOW",
+      "trend": "DOWN",
+      "previousMovingAverage": 177.4531861111111,
+      "previousBlockNumber": "54411292",
+      "consistent": true
+    },
+    "decision": "BEAR",
+    "confidence": 0.8947368421052632,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "2",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMZN",
+      "currentPrice": 258.725,
+      "movingAverage": 257.9581277777778,
+      "volatility": 1.5574537023839408,
+      "percentileRank": 66.66666666666667,
+      "actualWindowSize": 9,
+      "isFullWindow": false,
+      "roundId": "716",
+      "blockNumber": "54524714",
+      "blockTimestamp": "1788551168"
+    },
+    "inputB": {
+      "level": "NEUTRAL",
+      "trend": "UP",
+      "previousMovingAverage": 257.86226875,
+      "previousBlockNumber": "54413731",
+      "consistent": false
+    },
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "worldIdAttestationStatus": "not_checked"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 475.07185,
+      "movingAverage": 470.168587499,
+      "volatility": 4.038484117521654,
+      "percentileRank": 100,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2611",
+      "blockNumber": "54527485",
+      "blockTimestamp": "1788551446"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 469.496404999,
+      "previousBlockNumber": "54463762",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  },
+  {
+    "inputA": {
+      "symbol": "AMD",
+      "currentPrice": 477.70045,
+      "movingAverage": 471.1081099995,
+      "volatility": 3.419732482914126,
+      "percentileRank": 100,
+      "actualWindowSize": 20,
+      "isFullWindow": true,
+      "roundId": "2612",
+      "blockNumber": "54530751",
+      "blockTimestamp": "1788551776"
+    },
+    "inputB": {
+      "level": "HIGH",
+      "trend": "UP",
+      "previousMovingAverage": 470.168587499,
+      "previousBlockNumber": "54527485",
+      "consistent": true
+    },
+    "decision": "BULL",
+    "confidence": 1,
+    "worldIdAttestationStatus": "unbacked",
+    "marketId": "3",
+    "betAmountWei": "1000000000000000"
+  }
+]

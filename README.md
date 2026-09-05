@@ -38,8 +38,13 @@ A parimutuel stock prediction market built on Robinhood Chain Mainnet, using nat
 - [x] World AgentKit integration — trusted-signer relayer (`relayer/`), gates fund-committing
   agent actions on AgentBook human-verification. Does not yet call `placeBet()`. See
   [Honest Disclosure](#honest-disclosure-agentkit-relayer) below.
-- [ ] Graph computation layer — _placeholder, not yet written_
-- [ ] Decision engine reference model — _placeholder, not yet written_
+- [x] Graph computation layer — `subgraph/`, `PriceRangeIndex` rolling-window stats, verified
+  against a Python reference model on 89 real on-chain events (`verification/graph-computation/`).
+- [x] Decision engine reference model — `decision-engine/`, BULL/BEAR/NO_TRADE over
+  `PriceRangeIndex` + relayer attestation status, verified against a Python reference model on
+  the same 89 real snapshots (`verification/decision/`). See
+  [Honest Disclosure](#honest-disclosure-agentkit-relayer) and `docs/spec.md` for the momentum
+  vs. mean-reversion signal-direction choice.
 
 ## Core Features
 

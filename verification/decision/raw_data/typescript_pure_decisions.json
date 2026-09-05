@@ -1,0 +1,892 @@
+[
+  {
+    "blockNumber": "54231169",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "HIGH",
+    "trend": "UNKNOWN"
+  },
+  {
+    "blockNumber": "54236117",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "HIGH",
+    "trend": "UNKNOWN"
+  },
+  {
+    "blockNumber": "54263709",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54266813",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "HIGH",
+    "trend": "UNKNOWN"
+  },
+  {
+    "blockNumber": "54266955",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54267616",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54269817",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "HIGH",
+    "trend": "UNKNOWN"
+  },
+  {
+    "blockNumber": "54276563",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54276665",
+    "symbol": "NVDA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "HIGH",
+    "trend": "UNKNOWN"
+  },
+  {
+    "blockNumber": "54277448",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54278144",
+    "symbol": "NVDA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54279642",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54279838",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54282051",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54294144",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 0.6,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54297510",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54302015",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54302128",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54302341",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54302533",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54302632",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54303003",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54303075",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54303076",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54303179",
+    "symbol": "NVDA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 0.6666666666666665,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54303218",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54303279",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54303576",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54304088",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.75,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54304284",
+    "symbol": "AMZN",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54304539",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54304759",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54305315",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54306732",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54307015",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.75,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54308581",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54310631",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54311811",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54312633",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54312732",
+    "symbol": "AMZN",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54314238",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8181818181818181,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54317207",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54317771",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54318977",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54320744",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BEAR",
+    "confidence": 0.7142857142857143,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54325197",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BEAR",
+    "confidence": 0.8666666666666667,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54325787",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BEAR",
+    "confidence": 0.875,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54326668",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BEAR",
+    "confidence": 0.8823529411764706,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54328102",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54329017",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54331382",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.7777777777777777,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54331515",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8888888888888888,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54332276",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.7142857142857142,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54332366",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.8,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54333747",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54333770",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.7894736842105263,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54333831",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54349751",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54351480",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54352936",
+    "symbol": "NVDA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 0.6,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54353825",
+    "symbol": "NVDA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54353890",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.75,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54355405",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BULL",
+    "confidence": 0.8823529411764707,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54355872",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54356027",
+    "symbol": "AMZN",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.6,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54356873",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.7777777777777777,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54357794",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.6666666666666665,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54366481",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8571428571428571,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54367955",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.7333333333333333,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54368145",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54370251",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54373759",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54383889",
+    "symbol": "TSLA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.9,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54385692",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.9,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54395567",
+    "symbol": "AMD",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BULL",
+    "confidence": 0.6,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54407710",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.875,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54408631",
+    "symbol": "PLTR",
+    "shouldQuery": false,
+    "queryReason": "throttled",
+    "decision": "BEAR",
+    "confidence": 0.8823529411764706,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54410170",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54411292",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8888888888888888,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54413731",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54415811",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54416731",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54453811",
+    "symbol": "NVDA",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54463762",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54470486",
+    "symbol": "TSLA",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54500648",
+    "symbol": "PLTR",
+    "shouldQuery": true,
+    "queryReason": "volatility_anomalous_and_not_throttled",
+    "decision": "BEAR",
+    "confidence": 0.8947368421052632,
+    "level": "LOW",
+    "trend": "DOWN"
+  },
+  {
+    "blockNumber": "54524714",
+    "symbol": "AMZN",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "NO_TRADE",
+    "confidence": 0,
+    "level": "NEUTRAL",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54527485",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  },
+  {
+    "blockNumber": "54530751",
+    "symbol": "AMD",
+    "shouldQuery": false,
+    "queryReason": "volatility_not_anomalous",
+    "decision": "BULL",
+    "confidence": 1,
+    "level": "HIGH",
+    "trend": "UP"
+  }
+]

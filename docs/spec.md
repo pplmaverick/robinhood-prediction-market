@@ -209,3 +209,47 @@ row make this state explicit rather than silent; consumers of this data
 (the AI decision engine, demo narration, writeup) should read
 `isFullWindow` before treating `movingAverage`/`volatility`/
 `percentileRank` as based on the intended N=20 sample size.
+
+## AI Decision Engine (`decision-engine/`)
+
+Consumes `PriceRangeIndex` (above) and, for a directional decision, calls the AgentKit relayer
+(`relayer/`) for a World ID attestation status. Does not call `placeBet()`.
+
+### Decision engine signal direction
+
+Step 2's consistency check (`decision-engine/src/bet-decision.js`) is **momentum/continuation**,
+not mean-reversion: `percentileRank` near the top of its window (`HIGH`, ≥80) combined with a
+rising `movingAverage` (`UP`) triggers `BULL`; `LOW` (≤20) combined with `DOWN` triggers `BEAR`.
+Any other combination — level not extreme, no prior snapshot for the symbol yet, or level and
+trend disagreeing — is `NO_TRADE`, not flipped to the opposite direction.
+
+This is one reasonable strategy assumption among several, not a claim that momentum is the
+correct or only valid trading logic — mean-reversion (extreme percentile + trend now reversing
+→ bet on the pullback) is equally defensible and was considered. Momentum was chosen because
+this project's narrative goal is a **verifiable reasoning trace**, not a precision trading
+strategy: momentum's cause-and-effect (price near a recent high, still climbing → bet it
+continues) is the easier one for a reviewer to check against a historical price chart by eye,
+without needing to accept a reversal-timing assumption on faith. A different, equally
+legitimate design could reasonably choose mean-reversion instead.
+
+Confirmed empirically against the real 89-row `PriceRangeIndex` history
+(`verification/decision/`, same dataset as the section above): of 32 real `NO_TRADE` outcomes,
+27 were "level not extreme" and 5 were "no prior snapshot yet" — zero were a genuine
+level/trend contradiction. The contradiction-handling branch exists and is unit-tested
+(`decision-engine/test/bet-decision.test.js`), but this particular historical window happened
+not to exercise it live.
+
+### Thresholds (must stay in sync between `decision-engine/src/config.js` and
+`verification/decision/reference_model.py` — see that directory's comparison report)
+
+- `PERCENTILE_HIGH_THRESHOLD` / `PERCENTILE_LOW_THRESHOLD` = 80 / 20 — informal "extreme
+  decile" cutoffs, not backtested against this dataset.
+- `VOLATILITY_ANOMALY_RATIO` = 1.5 — Step 1's query-worth signal fires when current volatility
+  is at least 1.5× a symbol's own trailing average volatility so far.
+- `QUERY_THROTTLE_MS` = 5 minutes — matches the 5-minute window already used elsewhere in this
+  codebase (AgentKit's own SIWE `maxAge`, this project's Robinhood-side nonce expiry in
+  `relayer/src/config.js`) for internal consistency, not because 5 minutes is derived from
+  anything specific to query cost.
+- `MAX_BET_SIZE_WEI` = 0.001 ETH — pinned to the deployed contract's own documented minimum bet
+  (see the root `README.md`'s "Fees & Security"), so it is demo-scale by construction rather
+  than by a guessed ETH/USD conversion.
