@@ -61,6 +61,7 @@ contract AgentStockMarket {
         require(block.timestamp <= a.expiresAt, "attestation expired");
         require(a.amount <= maxBetSizeWei, "exceeds max bet size");
         require(msg.value == a.amount, "value mismatch");
+        require(agentBets[a.marketId][a.agentAddress].amount == 0, "agent already bet on this market");
 
         bytes32 hash = keccak256(abi.encodePacked(
             a.agentAddress, a.humanId, a.marketId, a.direction,

@@ -100,6 +100,7 @@ which is the point.
 | `07_amount_exceeds_max` | `amount` one wei above `maxBetSizeWei` → reverts `"exceeds max bet size"`, checked before signature/market checks. |
 | `08_multi_agent_proportional` | Two BULL bettors of different sizes plus one BEAR bettor; BULL wins; each winner's payout is proportional to their share of the winning pool (`amount * totalPool / winningPool`), losing bettor's claim reverts. |
 | `09_sole_side_full_refund` | All three bettors are on the winning side (no losing pool at all) → each gets back exactly their own stake, no profit, no loss. |
+| `10_duplicateBetRejected` (Foundry-only, not in the 9-case Python comparison) | Same `agentAddress` + `marketId`, two `placeAgentBet` calls with different `robinhoodNonce`/`issuedAt`/`expiresAt` → second call reverts `"agent already bet on this market"`. Pure access-control check, no payout math — see "Spec amendment" below. |
 
 ## Fork test
 
@@ -116,21 +117,22 @@ tests above.
 
 ## Results
 
-**`forge test` — all 10 pass:**
+**`forge test` — all 11 pass:**
 
 ```
-Ran 10 tests for test/AgentStockMarket.t.sol:AgentStockMarketTest
-[PASS] test_01_bullWinsNormal() (gas: 829350)
-[PASS] test_02_bearWinsNormal() (gas: 809346)
-[PASS] test_03_tieBullWins() (gas: 824504)
+Ran 11 tests for test/AgentStockMarket.t.sol:AgentStockMarketTest
+[PASS] test_01_bullWinsNormal() (gas: 831736)
+[PASS] test_02_bearWinsNormal() (gas: 811732)
+[PASS] test_03_tieBullWins() (gas: 826912)
 [PASS] test_04_attestationExpired() (gas: 168509)
-[PASS] test_05_attestationReplay() (gas: 522425)
-[PASS] test_06_wrongSigner() (gas: 174489)
-[PASS] test_07_amountExceedsMax() (gas: 169042)
-[PASS] test_08_multiAgentProportional() (gas: 1152630)
-[PASS] test_09_soleSideFullRefund() (gas: 1147102)
+[PASS] test_05_attestationReplay() (gas: 522013)
+[PASS] test_06_wrongSigner() (gas: 177682)
+[PASS] test_07_amountExceedsMax() (gas: 169064)
+[PASS] test_08_multiAgentProportional() (gas: 1156209)
+[PASS] test_09_soleSideFullRefund() (gas: 1150703)
+[PASS] test_10_duplicateBetRejected() (gas: 272543)
 [PASS] test_fork_marketsViewMatchesRealContract() (gas: 38842)
-Suite result: ok. 10 passed; 0 failed; 0 skipped; finished in 4.92s (4.93s CPU time)
+Suite result: ok. 11 passed; 0 failed; 0 skipped; finished in 5.03s (5.04s CPU time)
 ```
 
 **`compare_results.py` — all 9 cases match:**
@@ -156,28 +158,45 @@ shasum -a 256 verification/test_vectors.json verification/python_expected_result
   verification/solidity_actual_results.json > verification/commitments.sha256
 ```
 
-## Known observations (not fixed here — spec was implemented verbatim)
+## Spec amendment: duplicate-bet guard (applied)
+
+Observation 1 below was fixed by an explicit one-line spec amendment:
+
+```solidity
+require(agentBets[a.marketId][a.agentAddress].amount == 0, "agent already bet on this market");
+```
+
+placed in `placeAgentBet` right after the `msg.value == a.amount` check (before
+hash computation). `msg.sender != a.agentAddress` is deliberately left
+unchanged — confirmed as intentional meta-tx-style relaying: `msg.value` must
+equal `a.amount`, so a third-party submitter has no arbitrage room.
+
+**Side effect on case 05 (replay), worth being explicit about:** `agentBets[...]`
+is never cleared once set (not even by `claimAgentWinnings`), so this new
+check — sitting before `require(!usedAttestations[hash], ...)` — now catches
+*any* second `placeAgentBet` call from the same agent on the same market
+before the hash-uniqueness check is ever reached, replay or not. Case 05's
+second call still correctly reverts (the replay is still rejected), but the
+actual revert string changed from `"attestation already used"` to
+`"agent already bet on this market"`; the test's `vm.expectRevert` was
+updated to match. This doesn't touch any of the three Python-compared fields
+for case 05 (hash / signer_valid / payout are all unchanged — see
+`commitments.sha256`, identical before and after this amendment).
+`"attestation already used"` remains in the contract as defense-in-depth; it
+is just not reachable through this exact call pattern anymore.
+
+## Known observations (not fixed here — everything else implemented verbatim)
 
 These were noticed while building the test suite. Per instruction, the
 contract logic in `AgentStockMarket.sol` was implemented exactly as
-specified, with no unilateral changes — these are flagged for a human
-decision, not silently patched:
+specified (observation 1 has since been amended per the section above; the
+rest are flagged for a human decision, not silently patched):
 
-1. **No re-bet guard.** Unlike the source `StockPredictionMarket.placeBet()`
-   (`require(bets[marketId][msg.sender].amount == 0, "Already bet")`),
-   `placeAgentBet` has no check preventing the same `agentAddress` from
-   placing a second, different attestation for the same `marketId`. Since
-   `agentBets[marketId][agentAddress]` is overwritten (not additive) while
-   `agentBullPool`/`agentBearPool` are incremented on every accepted bet,
-   a second bet from the same agent on the same market would inflate the
-   pool denominator without a corresponding claimable record for the first
-   bet — diluting other agents' payouts. None of the 9 scenarios above
-   exercise this path (each agent bets at most once per market), so it did
-   not surface as a test failure here.
+1. ~~No re-bet guard.~~ **Fixed** — see "Spec amendment" above.
 2. **`placeAgentBet` does not check `msg.sender == a.agentAddress`.** Any
    address holding a validly-signed attestation can submit it and pay the
    ETH; the bet is recorded under `a.agentAddress` regardless of who called.
-   This may be intentional (meta-tx-style relaying), but is worth confirming.
+   Confirmed intentional (meta-tx-style relaying) — left unchanged.
 3. **Tie has no refund path**, by design parity with the source contract
    (`docs/submission_existing_work.md` already documents this as a known,
    currently-unfixed gap in `StockPredictionMarket.claimWinnings()` too).

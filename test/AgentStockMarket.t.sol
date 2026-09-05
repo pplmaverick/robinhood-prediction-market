@@ -312,7 +312,14 @@ contract AgentStockMarketTest is Test {
     }
 
     // ---------------------------------------------------------------------
-    // 05: replay — identical attestation + signature submitted twice
+    // 05: replay — identical attestation + signature submitted twice.
+    // Since the 10_duplicateBetRejected guard (agentBets[...].amount == 0)
+    // now runs before the usedAttestations[hash] check, and agentBets[...]
+    // is never cleared once set, a second submission from the SAME agent on
+    // the SAME market always hits "agent already bet on this market" first
+    // — the replay is still correctly rejected, just via that earlier check
+    // rather than "attestation already used" (which remains in place as
+    // defense-in-depth, but is unreachable through this exact call pattern).
     // ---------------------------------------------------------------------
 
     function test_05_attestationReplay() public {
@@ -327,7 +334,7 @@ contract AgentStockMarketTest is Test {
 
         market.placeAgentBet{value: a1.amount}(a1, v1, r1, s1);
 
-        vm.expectRevert(bytes("attestation already used"));
+        vm.expectRevert(bytes("agent already bet on this market"));
         market.placeAgentBet{value: a1.amount}(a1, v1, r1, s1);
 
         mock.setMarket(MARKET_ID, 1_010_000, 100, 110, uint8(IStockPredictionMarket.MarketState.SETTLED));
@@ -488,5 +495,30 @@ contract AgentStockMarketTest is Test {
                 _addr(agent3), '":"400000000000000"}'
             )
         );
+    }
+
+    // ---------------------------------------------------------------------
+    // 10: same agent, same market, second placeAgentBet call rejected.
+    // Pure access-control check (no payout math involved) -- not part of the
+    // 9-case Independent Reference Model comparison; verified standalone here.
+    // ---------------------------------------------------------------------
+
+    function test_10_duplicateBetRejected() public {
+        address agent1 = address(0x1011);
+        AgentStockMarket.Attestation memory a1 = _mk(agent1, 17, 0, 300_000_000_000_000, 1, 1_000_000, 1_000_300);
+        // Different nonce/issuedAt/expiresAt from a1, but same agentAddress and marketId.
+        AgentStockMarket.Attestation memory a2 = _mk(agent1, 17, 0, 200_000_000_000_000, 2, 1_000_100, 1_000_400);
+
+        mock.setMarket(MARKET_ID, 1_010_000, 0, 0, uint8(IStockPredictionMarket.MarketState.OPEN));
+        vm.warp(1_000_000);
+
+        bytes32 h1 = _hashAttestation(a1);
+        (uint8 v1, bytes32 r1, bytes32 s1) = _sign(RELAYER_PK, h1);
+        market.placeAgentBet{value: a1.amount}(a1, v1, r1, s1);
+
+        bytes32 h2 = _hashAttestation(a2);
+        (uint8 v2, bytes32 r2, bytes32 s2) = _sign(RELAYER_PK, h2);
+        vm.expectRevert(bytes("agent already bet on this market"));
+        market.placeAgentBet{value: a2.amount}(a2, v2, r2, s2);
     }
 }
