@@ -5,3 +5,13 @@ cache/
 .vercel
 frontend/dist
 __pycache__/
+
+# Foundry (kept separate from Hardhat's artifacts/ and cache/ above)
+out/
+forge-cache/
+
+# Intermediate scratch file: forge test appends here (one line per test,
+# since Foundry reverts each test's EVM state incl. this contract's own
+# storage, but not cheatcode file I/O); aggregate_solidity_results.py folds
+# it into the committed solidity_actual_results.json. Regenerated every run.
+verification/solidity_actual_results.jsonl

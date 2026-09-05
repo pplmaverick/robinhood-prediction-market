@@ -1,0 +1,517 @@
+{
+  "_meta": {
+    "title": "Independent Reference Model Testing \u2014 AgentStockMarket.sol test vectors",
+    "relayer_address": "0x38443D7031F0AE5631C17A584Ca96441EbF07051",
+    "relayer_private_key": "0x025810031d9dbdd6eea63e8ecd4d9a8b58f26fdcc17317ea7cdfcc52bbe4cc27",
+    "wrong_signer_address": "0xBd517d99935db681e81A9aeC83fE70DEfCC8981f",
+    "wrong_signer_private_key": "0x55fddaf6a6998db89fe6855ea24660cfcb7448b4bd4c1d4642ccf1a67571102c",
+    "key_disclaimer": "TEST-ONLY ephemeral relayer key, generated fresh via `cast wallet new` for this verification task only. This is NOT the production relayer identity and must never be reused outside this test suite.",
+    "max_bet_size_wei": "1000000000000000",
+    "note": "Every attestation's `signature` field here is a convenience for readers of this file only. verification/reference_model.py and test/AgentStockMarket.t.sol each independently recompute attestation_hash() from the raw fields and treat (v, r, s) as an opaque signature to verify, not a precomputed truth to trust."
+  },
+  "cases": [
+    {
+      "case_id": "01_bull_wins_normal",
+      "description": "Two agents bet opposite directions; price rises (no tie); sole BULL bettor collects the full pool; BEAR bettor's claim reverts.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001001",
+          "human_id": 1,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "600000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x03661fa99b87be99990232f6c9db6fca725b1f8ebea81f059864c29dcbf34136",
+            "v": 27,
+            "r": "0x4f21ef6fff7c52cdebf1a0bf99e5209210b9d9cecb6df2f6bb53475ab663c46e",
+            "s": "0x491032b15bd0ea17ca11c79a1902d7f88883dbe82ffb722c9bee089ed072e814"
+          }
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001002",
+          "human_id": 2,
+          "market_id": 1,
+          "direction": 1,
+          "amount_wei": "400000000000000",
+          "robinhood_nonce": 2,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xcab6974622350acfcbbffedcedc285d777b307df02b0df557a4a660d45ff2b15",
+            "v": 27,
+            "r": "0x23926ccb0694e586f6d4ed3552c5af31b3fa2862f679be8130f25066accbe0f3",
+            "s": "0x5ee3a8788a646f406b7ad3d706ce1d1d62afa35a8486dc4b27655bb3c7c64839"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        null
+      ],
+      "settle": {
+        "open_price": 100,
+        "close_price": 110
+      },
+      "claims": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001001",
+          "expect_revert": null,
+          "expected_payout_wei": "1000000000000000"
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001002",
+          "expect_revert": "bet did not win",
+          "expected_payout_wei": null
+        }
+      ]
+    },
+    {
+      "case_id": "02_bear_wins_normal",
+      "description": "Two agents bet opposite directions; price falls; sole BEAR bettor collects the full pool; BULL bettor's claim reverts.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001003",
+          "human_id": 3,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "400000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xd76c384e420dc24a5cdb554dca9a2292553770e06471a9e40bf529d101b4a789",
+            "v": 27,
+            "r": "0x5aa9172389f1ae51699dab613ef99dff6abd8fc63cbedb346adda17279959d90",
+            "s": "0x0c920625d8cbdae8f782f112819ff7d316d330c5315d215c6926c76e58101062"
+          }
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001004",
+          "human_id": 4,
+          "market_id": 1,
+          "direction": 1,
+          "amount_wei": "600000000000000",
+          "robinhood_nonce": 2,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x0f68d8b3b163e51a42916b34ac35abecca8f413071bc9d647506b8a58fdc40d4",
+            "v": 27,
+            "r": "0x19d42ec7b16e663d921b98e66ca47977209362eb17351241127fc471ab9e2a0c",
+            "s": "0x00409263dd0a92da7ea03cd3876018c9084c573d854fb5f649a4124afb5dacb7"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        null
+      ],
+      "settle": {
+        "open_price": 200,
+        "close_price": 150
+      },
+      "claims": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001003",
+          "expect_revert": "bet did not win",
+          "expected_payout_wei": null
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001004",
+          "expect_revert": null,
+          "expected_payout_wei": "1000000000000000"
+        }
+      ]
+    },
+    {
+      "case_id": "03_tie_bull_wins",
+      "description": "openPrice == closePrice. Tie resolves to BULL (close >= open), not to a refund. BEAR bettor loses despite the tie.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001005",
+          "human_id": 5,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x6b7c3b53da5f7a17d59d6cc3293629703724f548b97780086e512ebfc16d85b1",
+            "v": 27,
+            "r": "0x67360db503b8054a00c6450d3088f68770c230f7df18832b38c8d2483478c086",
+            "s": "0x2216cab3a5b653f2c743d987f34e02ac6bd3291197a4a51b5d0ee3ea236acca0"
+          }
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001006",
+          "human_id": 6,
+          "market_id": 1,
+          "direction": 1,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 2,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x60303709b4b247b87a56d9783bad4c072f7ce015e828c651176e318bdc11e11d",
+            "v": 28,
+            "r": "0x18c500908cf0bb4ffff51d7d31a11d98b02ee91cfbed7513508b86e0dea935d5",
+            "s": "0x71b72856b7d1f199549190be605284ec6eb450b735bc258245f2db424aae84df"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        null
+      ],
+      "settle": {
+        "open_price": 300,
+        "close_price": 300
+      },
+      "claims": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001005",
+          "expect_revert": null,
+          "expected_payout_wei": "1000000000000000"
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001006",
+          "expect_revert": "bet did not win",
+          "expected_payout_wei": null
+        }
+      ]
+    },
+    {
+      "case_id": "04_attestation_expired",
+      "description": "placeAgentBet called at a timestamp past the attestation's expiresAt.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001007",
+          "human_id": 7,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xb3e6390cd1941852276df34d4a9ceb669ff090d0edb09c94cf4dcbb66d220347",
+            "v": 27,
+            "r": "0xc01baeecc2f7d839fe4b21f326de65905cd7370555f342dd5a038db4977362d0",
+            "s": "0x3579dccbac6eee0a9f050aa2194a8238a1f2cb901cb1d585643740050668d350"
+          }
+        }
+      ],
+      "place_call_time": 1000301,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        "attestation expired"
+      ],
+      "settle": null,
+      "claims": []
+    },
+    {
+      "case_id": "05_attestation_replay",
+      "description": "The same attestation (same hash, same signature) is submitted to placeAgentBet twice. First call succeeds; second must revert.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001008",
+          "human_id": 8,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xe6fcdd8fca4a63e55a44ca5b61f079baefb07472aa3bc4ad356f1ec6bf163191",
+            "v": 27,
+            "r": "0x2bda313f88c8efab12085b2da88c9b4ab84944fc857e5f919c5c47e2f5ea8872",
+            "s": "0x7606980bf1f4ad2a79f9c37df4aa4723477e716cf096ee0237a7df5caddff5bc"
+          }
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001008",
+          "human_id": 8,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xe6fcdd8fca4a63e55a44ca5b61f079baefb07472aa3bc4ad356f1ec6bf163191",
+            "v": 27,
+            "r": "0x2bda313f88c8efab12085b2da88c9b4ab84944fc857e5f919c5c47e2f5ea8872",
+            "s": "0x7606980bf1f4ad2a79f9c37df4aa4723477e716cf096ee0237a7df5caddff5bc"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        "attestation already used"
+      ],
+      "settle": {
+        "open_price": 100,
+        "close_price": 110
+      },
+      "claims": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001008",
+          "expect_revert": null,
+          "expected_payout_wei": "500000000000000"
+        }
+      ]
+    },
+    {
+      "case_id": "06_wrong_signer",
+      "description": "Attestation fields are well-formed but signed by a non-relayer key.",
+      "attestations": [
+        {
+          "agent_address": "0x0000000000000000000000000000000000001009",
+          "human_id": 9,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "wrong_signer",
+          "signature": {
+            "attestation_hash": "0x9077d8708c117e94a5f9d81d2e1993aabbedd46cb375f1f0427ff02823d90bb6",
+            "v": 28,
+            "r": "0x5f038e22b69194678609314fb57290ae74ac3571f78dd0b5a224769a37e14739",
+            "s": "0x499a1a8a07e0ec882f1ae2bf1c20c6c2bd1cf3382cf5ac6c7392d6773190be17"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        "invalid attestation signature"
+      ],
+      "settle": null,
+      "claims": []
+    },
+    {
+      "case_id": "07_amount_exceeds_max",
+      "description": "amount is one wei above maxBetSizeWei; correctly signed otherwise.",
+      "attestations": [
+        {
+          "agent_address": "0x000000000000000000000000000000000000100A",
+          "human_id": 10,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "1000000000000001",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x99806d89b3030fc030ad43c92782dfcb4d6ca31fa1781269f521347e3ec68a60",
+            "v": 28,
+            "r": "0x8e0d39c35e95c1914bc49d15fa0c40c08bd5ecbdd97eb78630238310244335d0",
+            "s": "0x24d9a4900a6fb18a3a6b12fc7c63308d40fc32310af9981e7d7d0dc78b7bcbd9"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        "exceeds max bet size"
+      ],
+      "settle": null,
+      "claims": []
+    },
+    {
+      "case_id": "08_multi_agent_proportional",
+      "description": "Two BULL bettors of different sizes plus one BEAR bettor; BULL wins; each BULL winner's payout is proportional to their share of the winning pool.",
+      "attestations": [
+        {
+          "agent_address": "0x000000000000000000000000000000000000100b",
+          "human_id": 11,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "300000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xd53c3097e93c15ef5374e86baf1b8c5f3252ae484fcaf933415005873648df28",
+            "v": 28,
+            "r": "0xfa836861338ececbfabff32014705e114164dfd29d9db1a28220e450bedd4d26",
+            "s": "0x2a021a6361ad87de41ad1658c73889d358796508266ed00c209b66f106e857f7"
+          }
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100C",
+          "human_id": 12,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "200000000000000",
+          "robinhood_nonce": 2,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xd48d8db4449e3ba88862385c68ad6daa9deb56fb4032dbfa164fd82cdb0e0cf2",
+            "v": 27,
+            "r": "0x21a0e69b1c244fc1d7a99fdb805b2679e0400bac02d6cac58c53a7194c0a36dd",
+            "s": "0x36e63f5a5c29e6dac3b11b13201cf94348784d9ecfecef77460ae5f02539a95d"
+          }
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100D",
+          "human_id": 13,
+          "market_id": 1,
+          "direction": 1,
+          "amount_wei": "500000000000000",
+          "robinhood_nonce": 3,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xdb45cb1a1a4d7426a27fa9f1e76f631a0707b7d9e37eec74ebc4522ef920d4cc",
+            "v": 27,
+            "r": "0x2063ad5918828ba7e623df16e3fb8b21ee4c49a3c50164528c8cdc45da72f9d9",
+            "s": "0x6d87bfc7e5eb677015b677247c74b2502f67638ce851625eb3a7acbd1222671a"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        null,
+        null
+      ],
+      "settle": {
+        "open_price": 100,
+        "close_price": 150
+      },
+      "claims": [
+        {
+          "agent_address": "0x000000000000000000000000000000000000100b",
+          "expect_revert": null,
+          "expected_payout_wei": "600000000000000"
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100C",
+          "expect_revert": null,
+          "expected_payout_wei": "400000000000000"
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100D",
+          "expect_revert": "bet did not win",
+          "expected_payout_wei": null
+        }
+      ]
+    },
+    {
+      "case_id": "09_sole_side_full_refund",
+      "description": "All three agents bet BULL, and BULL wins; no BEAR pool exists, so each winner's payout equals exactly their own stake.",
+      "attestations": [
+        {
+          "agent_address": "0x000000000000000000000000000000000000100e",
+          "human_id": 14,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "300000000000000",
+          "robinhood_nonce": 1,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xd33c4c4756948eddaade6f662b433d30392b630077bfd79a774ba2fe9c359718",
+            "v": 28,
+            "r": "0x51b16582766112a6f48eaf8e7ec2e0dfb913e4fb028218f57cc3688654428e1f",
+            "s": "0x0586ca19a1e12f8141b2db8fe54aedd23740fb4b445ebc9078000093679200b2"
+          }
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100f",
+          "human_id": 15,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "300000000000000",
+          "robinhood_nonce": 2,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0x2a8b68e55036cbdfbbf8a5fa85ec830b4fdc28ee861ec441860ee397ecfab2a4",
+            "v": 27,
+            "r": "0xecf9dd729ecce9942246d140cf7535638d5d1b0f2800345de2f7861f1e06333a",
+            "s": "0x12e7dedc461b5bf067f747776cb4031b0e05e080ccf530b25d4f95eb355d9528"
+          }
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001010",
+          "human_id": 16,
+          "market_id": 1,
+          "direction": 0,
+          "amount_wei": "400000000000000",
+          "robinhood_nonce": 3,
+          "issued_at": 1000000,
+          "expires_at": 1000300,
+          "signer": "relayer",
+          "signature": {
+            "attestation_hash": "0xf4becba1253891678f258873488485cf81ab4a6cb2d6e716e279ea705b7bb1b3",
+            "v": 27,
+            "r": "0xcfcebf167d2bb834eb90ad6c9547838b679faa9c0f19ae81d01139be989182be",
+            "s": "0x33c6843263f2d8ff3da3327b4ea16f172df0197234648e2a100987188362c768"
+          }
+        }
+      ],
+      "place_call_time": 1000000,
+      "market_close_time": 1010000,
+      "expect_place_revert": [
+        null,
+        null,
+        null
+      ],
+      "settle": {
+        "open_price": 100,
+        "close_price": 200
+      },
+      "claims": [
+        {
+          "agent_address": "0x000000000000000000000000000000000000100e",
+          "expect_revert": null,
+          "expected_payout_wei": "300000000000000"
+        },
+        {
+          "agent_address": "0x000000000000000000000000000000000000100f",
+          "expect_revert": null,
+          "expected_payout_wei": "300000000000000"
+        },
+        {
+          "agent_address": "0x0000000000000000000000000000000000001010",
+          "expect_revert": null,
+          "expected_payout_wei": "400000000000000"
+        }
+      ]
+    }
+  ]
+}

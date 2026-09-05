@@ -1,0 +1,90 @@
+[
+  {
+    "case_id": "01_bull_wins_normal",
+    "expected_hash": [
+      "0x03661fa99b87be99990232f6c9db6fca725b1f8ebea81f059864c29dcbf34136",
+      "0xcab6974622350acfcbbffedcedc285d777b307df02b0df557a4a660d45ff2b15"
+    ],
+    "expected_signer_valid": true,
+    "expected_payout": {
+      "0x0000000000000000000000000000000000001001": "1000000000000000",
+      "0x0000000000000000000000000000000000001002": null
+    }
+  },
+  {
+    "case_id": "02_bear_wins_normal",
+    "expected_hash": [
+      "0xd76c384e420dc24a5cdb554dca9a2292553770e06471a9e40bf529d101b4a789",
+      "0x0f68d8b3b163e51a42916b34ac35abecca8f413071bc9d647506b8a58fdc40d4"
+    ],
+    "expected_signer_valid": true,
+    "expected_payout": {
+      "0x0000000000000000000000000000000000001003": null,
+      "0x0000000000000000000000000000000000001004": "1000000000000000"
+    }
+  },
+  {
+    "case_id": "03_tie_bull_wins",
+    "expected_hash": [
+      "0x6b7c3b53da5f7a17d59d6cc3293629703724f548b97780086e512ebfc16d85b1",
+      "0x60303709b4b247b87a56d9783bad4c072f7ce015e828c651176e318bdc11e11d"
+    ],
+    "expected_signer_valid": true,
+    "expected_payout": {
+      "0x0000000000000000000000000000000000001005": "1000000000000000",
+      "0x0000000000000000000000000000000000001006": null
+    }
+  },
+  {
+    "case_id": "04_attestation_expired",
+    "expected_hash": "0xb3e6390cd1941852276df34d4a9ceb669ff090d0edb09c94cf4dcbb66d220347",
+    "expected_signer_valid": true,
+    "expected_payout": null
+  },
+  {
+    "case_id": "05_attestation_replay",
+    "expected_hash": "0xe6fcdd8fca4a63e55a44ca5b61f079baefb07472aa3bc4ad356f1ec6bf163191",
+    "expected_signer_valid": true,
+    "expected_payout": "500000000000000"
+  },
+  {
+    "case_id": "06_wrong_signer",
+    "expected_hash": "0x9077d8708c117e94a5f9d81d2e1993aabbedd46cb375f1f0427ff02823d90bb6",
+    "expected_signer_valid": false,
+    "expected_payout": null
+  },
+  {
+    "case_id": "07_amount_exceeds_max",
+    "expected_hash": "0x99806d89b3030fc030ad43c92782dfcb4d6ca31fa1781269f521347e3ec68a60",
+    "expected_signer_valid": true,
+    "expected_payout": null
+  },
+  {
+    "case_id": "08_multi_agent_proportional",
+    "expected_hash": [
+      "0xd53c3097e93c15ef5374e86baf1b8c5f3252ae484fcaf933415005873648df28",
+      "0xd48d8db4449e3ba88862385c68ad6daa9deb56fb4032dbfa164fd82cdb0e0cf2",
+      "0xdb45cb1a1a4d7426a27fa9f1e76f631a0707b7d9e37eec74ebc4522ef920d4cc"
+    ],
+    "expected_signer_valid": true,
+    "expected_payout": {
+      "0x000000000000000000000000000000000000100b": "600000000000000",
+      "0x000000000000000000000000000000000000100c": "400000000000000",
+      "0x000000000000000000000000000000000000100d": null
+    }
+  },
+  {
+    "case_id": "09_sole_side_full_refund",
+    "expected_hash": [
+      "0xd33c4c4756948eddaade6f662b433d30392b630077bfd79a774ba2fe9c359718",
+      "0x2a8b68e55036cbdfbbf8a5fa85ec830b4fdc28ee861ec441860ee397ecfab2a4",
+      "0xf4becba1253891678f258873488485cf81ab4a6cb2d6e716e279ea705b7bb1b3"
+    ],
+    "expected_signer_valid": true,
+    "expected_payout": {
+      "0x000000000000000000000000000000000000100e": "300000000000000",
+      "0x000000000000000000000000000000000000100f": "300000000000000",
+      "0x0000000000000000000000000000000000001010": "400000000000000"
+    }
+  }
+]

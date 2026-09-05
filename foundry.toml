@@ -1,0 +1,23 @@
+[profile.default]
+via_ir = true # test/AgentStockMarket.t.sol's scenario functions have enough
+              # locals (attestation + v/r/s per agent) to hit "stack too deep"
+              # without this.
+# Reuses the existing Hardhat contracts/ and test/ directories rather than
+# Foundry's default src/ — this repo is Hardhat-primary, Foundry is added
+# alongside it for this verification task only.
+src = "contracts"
+test = "test"
+libs = ["lib"]
+out = "out"
+# Deliberately NOT "cache" — that name is already Hardhat's
+# (cache/solidity-files-cache.json). A separate path avoids either toolchain
+# clobbering the other's cache.
+cache_path = "forge-cache"
+
+fs_permissions = [{ access = "read-write", path = "verification" }]
+
+remappings = [
+    "forge-std/=lib/forge-std/src/",
+    "@chainlink/contracts/=node_modules/@chainlink/contracts/",
+    "@openzeppelin/contracts/=node_modules/@openzeppelin/contracts/",
+]
