@@ -1,0 +1,16 @@
+{
+  "name": "@robinhood-stock-market/agentkit-relayer",
+  "version": "0.1.0",
+  "description": "Trusted-signer relayer bridging World AgentKit human-verification to Robinhood Chain. Verifies AgentKit signatures, checks AgentBook humanId with three-state fault handling, enforces its own replay nonce, and signs a raw-hash attestation. Does not call placeBet() — that integration is out of scope for this round.",
+  "type": "module",
+  "main": "src/relayer.js",
+  "private": true,
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "dependencies": {
+    "@worldcoin/agentkit-core": "0.2.1",
+    "viem": "2.56.3",
+    "@noble/curves": "2.4.0"
+  }
+}

@@ -35,7 +35,9 @@ A parimutuel stock prediction market built on Robinhood Chain Mainnet, using nat
 
 ### New (this hackathon — Continuity Track)
 
-- [ ] World AgentKit integration — _placeholder, not yet written_
+- [x] World AgentKit integration — trusted-signer relayer (`relayer/`), gates fund-committing
+  agent actions on AgentBook human-verification. Does not yet call `placeBet()`. See
+  [Honest Disclosure](#honest-disclosure-agentkit-relayer) below.
 - [ ] Graph computation layer — _placeholder, not yet written_
 - [ ] Decision engine reference model — _placeholder, not yet written_
 
@@ -189,6 +191,29 @@ Robinhood Chain launched mainnet on July 1, 2026 with Chainlink as the official 
 
 **Stock Token as Market Identifier**
 On most chains, a prediction market would use an arbitrary string or uint to identify a market. On Robinhood Chain, we use the native stock token contract address directly, creating an on-chain verifiable link between the prediction market and the actual tokenized equity.
+
+## Honest Disclosure: AgentKit Relayer
+
+The `relayer/` service is a **trusted-signer relayer bridge, not a trust-minimized one.** It
+verifies a World AgentKit-signed agent request, checks the agent's wallet against World Chain's
+`AgentBook` for a registered `humanId`, enforces its own replay-nonce, and signs an attestation
+with a relayer-held private key. Nothing about that attestation is verified on-chain by a smart
+contract yet — a party trusting its output is trusting this relayer process, not a cryptographic
+proof a contract independently checks. `placeBet()` does not consume this attestation; that
+integration is explicitly out of scope for this round (see `relayer/README.md`).
+
+Separately, and identified after the fact during design: World ID (and therefore AgentBook)
+proves an agent maps to one distinct real human — *uniqueness* — not that the human authorized
+this specific spend or amount, and not a post-hoc auditable record of that authorization. The
+current design only blocks agent bets with no real human behind them at all; it does not yet
+cover spend limits, scoped authorization, or accountability after the fact. See
+`prompts/03-calibrated-autonomy-boundary.md` for the full reasoning.
+
+The `lookupHuman` three-state read (`backed` / `unbacked` / `unknown`, so an AgentBook RPC
+failure is never reported as "not registered") follows the pattern documented in
+[poh-aggregator](https://github.com/andrevalenm/poh-aggregator)'s
+[`lookupHumanBacking`](https://github.com/andrevalenm/poh-aggregator/blob/a26488ac8e3a4ed02068d3693856358b81e7e2fd/apps/agent/src/world/agentbook.js#L63-L82) —
+credited here as prior art this implementation deliberately follows, not independently arrived at.
 
 ## Stack
 
